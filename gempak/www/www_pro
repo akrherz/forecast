@@ -1,0 +1,78 @@
+ CXSTNS    Cross-section station line        sla
+ SNPARM    Sounding parameter list           tmpc;hght;uwnd;vwnd
+ SNFILE    Sounding data file                /data/gempak/upperair/961015.gem
+ DATTIM    Date/time                         15/14
+ VCOORD    Vertical coordinate type          PRES
+ PTYPE     Plot type/h:w ratio/margins       skewt
+ YAXIS     Ystrt/ystop/yinc/lbl;gln;tck      1020/100//1;1;0
+ TAXIS     Time1-time2-tinc;lbl;gln;tck      
+ LINE      Line color/type/width/label       19/1/1   !   1/1/5
+ BORDER    Background color/dash/width       15
+ CINT      Contour interval/min/max          25;35;45;55;65;75;85;95      !   120
+ WIND      Wind symbol/siz/wdth/typ/hdsz     bk1/1.1/2
+ TITLE     Title color/line/title            0
+ PANEL     Panel loc/color/dash/width/regn   0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   GF|rad.gif
+ CLEAR     Clear screen flag                 no
+ FILTER    Filter data factor                0.7
+ TEXT      Text size/font/width/hw flag      1/2/1/hw
+ CURVE     Curve fit type                    2
+ CLRBAR    Color/ornt/anch/x;y/ln;wd/freq    0
+ CONTUR    Subbox/smooth                     
+ FINT      Fill interval/min/max             25;35;45;55;65;75;85;95
+ FLINE     Fill colors                       27-21--3;18-16--2;14-4--2
+ CTYPE     Contour type:  C/F                c/f     !   c
+ Parameters requested: CXSTNS,SNPARM,SNFILE,DATTIM,VCOORD,PTYPE,YAXIS,TAXIS,
+ LINE,BORDER,CINT,WIND,TITLE,PANEL,DEVICE,CLEAR,FILTER,TEXT,CURVE,CLRBAR,
+ CONTUR,FINT,FLINE,CTYPE.
+ GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> GEMPAK-SNCROSS2> CXSTNS   = sla
+ SNPARM   = 
+ SNFILE   = /data/gempak/profiler/961015.gem
+ DATTIM   = all
+ VCOORD   = hght
+ PTYPE    = lin
+ YAXIS    = 500/12000/1000
+ TAXIS    = 
+ LINE     = 31/1/1/1
+ BORDER   = 5
+ CINT     = 5
+ WIND     = bk30-7
+ TITLE    = 1
+ PANEL    = 0
+ DEVICE   = invgps|||C|P
+ CLEAR    = y
+ FILTER   = 0.7
+ TEXT     = 1.0/21/1/hw
+ CURVE    = 2
+ CLRBAR   = 0
+ CONTUR   = 3/3
+ FINT     = 
+ FLINE    = 
+ CTYPE    = c
+ GEMPAK-SNCROSS2> [SNCROSS -16]  Multiple station entry is invalid for time sections.
+
+     SNCROSS PARAMETERS
+
+  TIMES        TOP LVL FOR TEMP  TOP LVL FOR WIND
+ 961015/0000          -9999             16565
+ 961015/0100          -9999             16565
+ 961015/0200          -9999             13565
+ 961015/0300          -9999             16565
+ 961015/0400          -9999             15565
+ 961015/0500          -9999             16565
+ 961015/0600          -9999              9445
+ 961015/0700          -9999             16565
+ 961015/0800          -9999             15565
+ 961015/0900          -9999             16565
+ 961015/1000          -9999             16565
+ 961015/1100          -9999             16565
+ 961015/1200          -9999             16565
+ 961015/1300          -9999             16565
+ PARM:          
+ VCOORD:    HGHT
+ CLEAR:     YES 
+ STATION:   SLA                                                                     
+Enter <cr> to accept parameters or type EXIT: Parameters requested: CXSTNS,SNPARM,SNFILE,DATTIM,VCOORD,PTYPE,YAXIS,TAXIS,
+ LINE,BORDER,CINT,WIND,TITLE,PANEL,DEVICE,CLEAR,FILTER,TEXT,CURVE,CLRBAR,
+ CONTUR,FINT,FLINE,CTYPE.
+ GEMPAK-SNCROSS2>

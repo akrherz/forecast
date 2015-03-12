@@ -1,0 +1,9 @@
+GDATTIM 14/12                                                                   
+GLEVEL  0                                                                       
+GVCORD  none                                                                    
+GFUNC   mul(3600., adv(tmpf;wnd))                                               
+GDFILE  tadv.grd                                                                
+GAREA   25;-130;50;-60                                                          
+PROJ    lcc                                                                     
+SCALE   0                                                                       
+OUTPUT  f/sf12                                                                  

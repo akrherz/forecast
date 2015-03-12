@@ -1,0 +1,171 @@
+ GDFILE    Grid file                         /data/gempak/hrs/96101012_eta.gem
+ GDATTIM   Grid date/time                    F12-F48-12
+ GLEVEL    Grid level                        0
+ GVCORD    Grid vertical coordinate          pres
+ PANEL     Panel loc/color/dash/width/regn   0
+ SKIP      Skip_cntr/skip_plt_x;skip_plt_y   0
+ SCALE     Scalar scale / vector scale       0
+ GFUNC     Scalar grid                       (quo(p12m,25.4)) !(quo(p12m,25.4)) ! emsl
+ CTYPE     Contour type:  C/F                f                !c                ! c
+ CONTUR    Subbox/smooth                     1
+ CINT      Contour interval/min/max          /.1/.1!0.10;0.25;0.50;0.75;1.0;1.25;1.5;1.75;2.0;2.25;2.50;2.75;3.0!4
+ LINE      Line color/type/width/label       20//2/0           !30//1/0          ! 5/1/2/3
+ FINT      Fill interval/min/max             0.01;0.10;0.25;0.50;0.75;1.0;1.25;1.5;1.75;2.0;2.25;2.50;2.75;3.0
+ FLINE     Fill colors                       0;21-27;24;28-30;14;15;2;5
+ HILO      Color/symbol/rng/rad/cnt/intp     !                 !25;2////30;30/y
+ HLSYM     HILO txt size/posn/font/wdth/hw   2;1.5//21//hw
+ CLRBAR    Color/ornt/anch/x;y/ln;wd/freq    31
+ GVECT     Vector grid                       
+ WIND      Wind symbol/siz/wdth/typ/hdsz     bk30-7
+ REFVEC    Mag;x;y;txtsiz/font/wdth/HW;labl  
+ TITLE     Title color/line/title            5// ~ ETA  12-HOUR TOTAL PCPN, MSLP|^ 12-HOURLY TOTAL PCPN, MSLP!0!0
+ TEXT      Text size/font/width/hw flag      1.2/21//hw
+ CLEAR     Clear screen flag                 yes
+ GAREA     Graphics area                     grid
+ SATFIL    Satellite image filename(s)       
+ RADFIL    Radar image filename(s)           /data/nexrad/dmx/9610101845.DMX
+ PROJ      Map projection/angles/margins     lcc/25;-95;25/1,3,0,0
+ MAP       Map color/dash/width              31
+ LATLON    Line color/dash/width/label/inc   0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   INVGPS|||C|P
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = /data/gempak/hrs/96101012_eta.gem
+ GDATTIM  = f12-f48-12
+ GLEVEL   = 500:1000                  !0
+ GVCORD   = pres                      !pres
+ PANEL    = 0
+ SKIP     = 1
+ SCALE    = -1                        ! 0
+ GFUNC    = (sub(hght@500,hght@1000)) !emsl
+ CTYPE    = c
+ CONTUR   = 1
+ CINT     = 6                         ! 4
+ LINE     = 3/3/3                     ! 20//4
+ FINT     = 
+ FLINE    = 
+ HILO     = ! 25;2/H#;L#///30;30/y
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 31
+ GVECT    = 
+ WIND     = bk30-7
+ REFVEC   = 
+ TITLE    = 5/-2/ ~ ETA   MSL PRESSURE, 1000-500 MB THICKNESS|^ MSLP, 1000-500 THKN
+ TEXT     = 1.2/21//hw
+ CLEAR    = yes
+ GAREA    = grid
+ SATFIL   = 
+ RADFIL   = /data/nexrad/dmx/9610101845.DMX
+ PROJ     = lcc/25;-95;25
+ MAP      = 31
+ LATLON   = 0
+ DEVICE   = INVGPS|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: /data/gempak/hrs/96101012_eta.gem                                       
+ TIMES:    961010/1200F012                     
+
+ GRID IDENTIFIER: 
+    PLOT LEVEL VCORD PARM                       WPARM
+       1 500:1 PRES  (SUB(HGHT@500,HGHT@1000))                             
+       2 0     PRES  EMSL                                                  
+
+ GAREA:  grid                                                                    
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = /data/gempak/hrs/96101012_eta.gem
+ GDATTIM  = f12-f48-12
+ GLEVEL   = 500
+ GVCORD   = pres                      !pres
+ PANEL    = 0
+ SKIP     = 1
+ SCALE    = 5                     !5                     ! -1
+ GFUNC    = (avor(wnd))           !(avor(wnd))           !hght
+ CTYPE    = c/f ! c
+ CONTUR   = 1
+ CINT     = 2/10/99               !2/4/8                 !6
+ LINE     = 7/5/1/2               !4/5/1/2               !19/1/2/1
+ FINT     = 16;20;24;28;32;36;40;44
+ FLINE    = 0;23-15
+ HILO     = 2;6/X;N/10-99;10-99   !
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 31
+ GVECT    = 
+ WIND     = bk30-7
+ REFVEC   = 
+ TITLE    = 5// ~ ETA  500 HEIGHTS AND VORTICITY|^ 500 HGHT AND VORTICITY!0
+ TEXT     = 1.2/21//hw
+ CLEAR    = yes
+ GAREA    = grid
+ SATFIL   = 
+ RADFIL   = /data/nexrad/dmx/9610101845.DMX
+ PROJ     = lcc/25;-95;25/1,3,0,0
+ MAP      = 31
+ LATLON   = 0
+ DEVICE   = INVGPS|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: /data/gempak/hrs/96101012_eta.gem                                       
+ TIMES:    961010/1200F012                     
+
+ GRID IDENTIFIER: 
+    PLOT LEVEL VCORD PARM                       WPARM
+       1 500   PRES  (AVOR(WND))                                           
+       2 500   PRES  (AVOR(WND))                                           
+       3 500   PRES  HGHT                                                  
+
+ GAREA:  grid                                                                    
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = /data/gempak/hrs/96101012_eta.gem
+ GDATTIM  = F12-F48-12
+ GLEVEL   = 0
+ GVCORD   = pres
+ PANEL    = 0
+ SKIP     = 0
+ SCALE    = 0
+ GFUNC    = (quo(p12m,25.4)) !(quo(p12m,25.4)) ! emsl
+ CTYPE    = f                !c                ! c
+ CONTUR   = 1
+ CINT     = /.1/.1!0.10;0.25;0.50;0.75;1.0;1.25;1.5;1.75;2.0;2.25;2.50;2.75;3.0!4
+ LINE     = 20//2/0           !30//1/0          ! 5/1/2/3
+ FINT     = 0.01;0.10;0.25;0.50;0.75;1.0;1.25;1.5;1.75;2.0;2.25;2.50;2.75;3.0
+ FLINE    = 0;21-27;24;28-30;14;15;2;5
+ HILO     = !                 !25;2////30;30/y
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 31
+ GVECT    = 
+ WIND     = bk30-7
+ REFVEC   = 
+ TITLE    = 5// ~ ETA  12-HOUR TOTAL PCPN, MSLP|^ 12-HOURLY TOTAL PCPN, MSLP!0!0
+ TEXT     = 1.2/21//hw
+ CLEAR    = yes
+ GAREA    = grid
+ SATFIL   = 
+ RADFIL   = /data/nexrad/dmx/9610101845.DMX
+ PROJ     = lcc/25;-95;25/1,3,0,0
+ MAP      = 31
+ LATLON   = 0
+ DEVICE   = INVGPS|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: /data/gempak/hrs/96101012_eta.gem                                       
+ TIMES:    961010/1200F012                     
+
+ GRID IDENTIFIER: 
+    PLOT LEVEL VCORD PARM                       WPARM
+       1 0     PRES  (QUO(P12M,25.4))                                      
+       2 0     PRES  (QUO(P12M,25.4))                                      
+       3 0     PRES   EMSL                                                 
+
+ GAREA:  grid                                                                    
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT>

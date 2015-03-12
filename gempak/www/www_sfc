@@ -1,0 +1,367 @@
+ GDFILE    Grid file                         file1.grd
+ DELTAN    Station spacing                   1.1
+ DELTAX    X spacing                         0.63
+ DELTAY    Y spacing                         0.63
+ GRDAREA   Area covered by grid              15;-140;60;-50
+ EXTEND    Points to extend grid             2;2;2;2
+ DTAAREA   Data area for OA                  15;-140;60;-50
+ SOURCE    Data source (SN or SF)            SF
+ SNFILE    Sounding data file                /data/gempak/upperair/960429.gem
+ SFFILE    Surface data file                 /data/gempak/surface/sao/960802.gem
+ SNPARM    Sounding parameter list           tmpc;hght;uwnd;vwnd
+ SFPARM    Surface parameter list            skyc:0.6;tmpf;wsym:0.6;rmsl;;dwpf;brbk:0.5
+ DATTIM    Date/time                         02/1900
+ LEVELS    Vertical levels                   0
+ MAXGRD    Maximum number of grids           200
+ Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GDFILE   = file1.grd
+ DELTAN   = 1.1
+ DELTAX   = 0.63
+ DELTAY   = 0.63
+ GRDAREA  = 15;-140;60;-50
+ EXTEND   = 2;2;2;2
+ DTAAREA  = 15;-140;60;-50
+ SOURCE   = SF
+ SNFILE   = /data/gempak/upperair/960429.gem
+ SFFILE   = /data/gempak/surface/sao/960802.gem
+ SNPARM   = tmpc;hght;uwnd;vwnd
+ SFPARM   = tmpc;dwpc;pmsl;uwnd;vwnd
+ DATTIM   = 02/2000
+ LEVELS   = 0
+ MAXGRD   = 200
+ GEMPAK-OAGRID>
+                    OBJECTIVE ANALYSIS PARAMETERS
+
+ GRIDAREA           15.00   -140.00     59.73    -50.54  (       60.00  -50.00)
+ DELTAN              1.100
+ DELTAX              0.630
+ DELTAY              0.630
+
+ GRID POINTS     X : 143  ( 2, 2 )        Y :  72  ( 2, 2 )
+ EXTENDAREA           13.74   -141.26     60.99    -49.28
+ DATAAREA             15.00   -140.00     60.00    -50.00
+
+Enter <cr> to accept parameters or type EXIT: Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> GEMPAK-OAGRID> SFFILE    Surface data file                 /data/gempak/surface/sao/960802.gem
+ GDFILE    Grid file                         file1.grd
+ SFPARM    Surface parameter list            tmpc;dwpc;pmsl;uwnd;vwnd
+ DATTIM    Date/time                         02/2000
+ DTAAREA   Data area for OA                  15;-140;60;-50
+ GUESS     Guess file^time                   
+ GAMMA     Convergence parameter             0.3
+ SEARCH    Search radius/Extrapolation       20/EX
+ NPASS     Number of passes                  2
+ Parameters requested: SFFILE,GDFILE,SFPARM,DATTIM,DTAAREA,GUESS,GAMMA,
+ SEARCH,NPASS.
+ GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> SFFILE   = /data/gempak/surface/sao/960802.gem
+ GDFILE   = file1.grd
+ SFPARM   = tmpc;dwpc;pmsl;uwnd;vwnd
+ DATTIM   = 02/2000
+ DTAAREA  = 15;-140;60;-50
+ GUESS    = 
+ GAMMA    = 0.3
+ SEARCH   = 20/EX
+ NPASS    = 2
+ GEMPAK-OABSFC> [OABSFC 6]  WARNING:  Area is not DATA area in file.
+
+ OABSFC PARAMETERS: 
+
+ Output grid file:        file1.grd
+ Number of x, y points:   143    72
+ Grid bnds:     15.00  -140.00    59.73   -50.54  Grid xtnd:    2   2   2   2
+ Station spacing:           1.10
+ No first guess file is requested. 
+ Surface file:            /data/gempak/surface/sao/960802.gem
+ Data area:               15;-140;60;-50
+ Parameters:              TMPC  DWPC  PMSL  UWND  VWND
+ Time:                   960802/2000         
+ GAMMA: 0.30   SEARCH:  20.00  NPASS:  2
+ Data extrapolation may occur. 
+Enter <cr> to accept parameters or type EXIT:
+   RMS values for pass  1
+            TMPC    DWPC    PMSL    UWND    VWND
+  RMS       2.37    2.23    0.74    2.00    1.98
+  #STN       980     977     469     977     977
+
+   RMS values for pass  2
+            TMPC    DWPC    PMSL    UWND    VWND
+  RMS       1.74    1.60    0.39    1.52    1.47
+  #STN       976     972     463     974     974
+ Parameters requested: SFFILE,GDFILE,SFPARM,DATTIM,DTAAREA,GUESS,GAMMA,
+ SEARCH,NPASS.
+ GEMPAK-OABSFC> GDFILE    Grid file                         file1.grd
+ GDATTIM   Grid date/time                    02/1900
+ GLEVEL    Grid level                        0
+ GVCORD    Grid vertical coordinate          none
+ PANEL     Panel loc/color/dash/width/regn   0
+ SKIP      Skip_cntr/skip_plt_x;skip_plt_y   /4/4
+ SCALE     Scalar scale / vector scale       
+ GFUNC     Scalar grid                       thte(pmsl,tmpc,dwpc)
+ CTYPE     Contour type:  C/F                c/f
+ CONTUR    Subbox/smooth                     
+ CINT      Contour interval/min/max          4
+ LINE      Line color/type/width/label       1/1/1
+ FINT      Fill interval/min/max             4
+ FLINE     Fill colors                       30-16--1;14-3--1
+ HILO      Color/symbol/rng/rad/cnt/intp     
+ HLSYM     HILO txt size/posn/font/wdth/hw   2;1.5//21//hw
+ CLRBAR    Color/ornt/anch/x;y/ln;wd/freq    0
+ GVECT     Vector grid                       WND
+ WIND      Wind symbol/siz/wdth/typ/hdsz     bk1/1.0/3
+ REFVEC    Mag;x;y;txtsiz/font/wdth/HW;labl  
+ TITLE     Title color/line/title            31/-2/~  SURFACE DATA
+ TEXT      Text size/font/width/hw flag      0.53/2/1/hw
+ CLEAR     Clear screen flag                 yes
+ GAREA     Graphics area                     20;-116;51;-62
+ SATFIL    Satellite image filename(s)       
+ RADFIL    Radar image filename(s)           
+ PROJ      Map projection/angles/margins     lcc
+ MAP       Map color/dash/width              15/1/3
+ LATLON    Line color/dash/width/label/inc   0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   invgps|||C|P
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file1.grd
+ GDATTIM  = 02/2000
+ GLEVEL   = 0
+ GVCORD   = none
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = tmpf
+ CTYPE    = c/f
+ CONTUR   = 
+ CINT     = 5
+ LINE     = 1/1/1
+ FINT     = 5
+ FLINE    = 28-16--1;14-11--1
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.0/3
+ REFVEC   = 
+ TITLE    = 31/-2/~ SURFACE TEMPERATURE (F) AND WINDS
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/5
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: file1.grd                                                               
+ TIMES:    960802/2000                         
+
+ GRID IDENTIFIER: 
+    LEVEL VCORD PARM                            WPARM
+        0  NONE TMPF                            WND                        
+
+ GAREA:  18;-120;53;-59                                                          
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> [NT -5]  # Run GDPLOT and generate analyzed sfc dew point is an unrecognized command.
+ GEMPAK-GDPLOT> [NT -5]  # is an unrecognized command.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file1.grd
+ GDATTIM  = 02/2000
+ GLEVEL   = 0
+ GVCORD   = none
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = dwpf
+ CTYPE    = c/f
+ CONTUR   = 
+ CINT     = 5
+ LINE     = 1/1/1
+ FINT     = 5
+ FLINE    = 28-16--1;14-4--1
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.0/3
+ REFVEC   = 
+ TITLE    = 31/-2/~ SURFACE DEW POINT (F) AND WINDS
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/5
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: file1.grd                                                               
+ TIMES:    960802/2000                         
+
+ GRID IDENTIFIER: 
+    LEVEL VCORD PARM                            WPARM
+        0  NONE DWPF                            WND                        
+
+ GAREA:  18;-120;53;-59                                                          
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> [NT -5]  # Run GDPLOT and generate analyzed sfc moist. divergence is an unrecognized command.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file1.grd
+ GDATTIM  = 02/2000
+ GLEVEL   = 0
+ GVCORD   = none
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = div((smul(mixr(dwpc,pmsl),wnd))
+ CTYPE    = c/f
+ CONTUR   = 
+ CINT     = -12;-8;-6;-4;-2;0;2;4;6;8
+ LINE     = 1/1/1
+ FINT     = -12;-8;-6;-4;-2;0;2;4;6;8
+ FLINE    = 15-18-1;21;22;23-27-1
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.0/3
+ REFVEC   = 
+ TITLE    = 31/-2/~ SURFACE MOISTURE DIVERGENCE
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/5
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: file1.grd                                                               
+ TIMES:    960802/2000                         
+
+ GRID IDENTIFIER: 
+    LEVEL VCORD PARM                            WPARM
+        0  NONE DIV((SMUL(MIXR(DWPC,PMSL),W     WND                        
+
+ GAREA:  18;-120;53;-59                                                          
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> [NT -5]  # Run GDPLOT and generate sfc theta-E is an unrecognized command.
+ GEMPAK-GDPLOT> [NT -5]  # is an unrecognized command.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file1.grd
+ GDATTIM  = 02/2000
+ GLEVEL   = 0
+ GVCORD   = none
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = thte(pmsl,tmpc,dwpc)
+ CTYPE    = c/f
+ CONTUR   = 
+ CINT     = 4
+ LINE     = 1/1/1
+ FINT     = 4
+ FLINE    = 30-16--1;14-3--1
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.0/3
+ REFVEC   = 
+ TITLE    = 31/-2/~ SURFACE THETA-E (K)
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/5
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: file1.grd                                                               
+ TIMES:    960802/2000                         
+
+ GRID IDENTIFIER: 
+    LEVEL VCORD PARM                            WPARM
+        0  NONE THTE(PMSL,TMPC,DWPC)            WND                        
+
+ GAREA:  18;-120;53;-59                                                          
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> AREA      Data area                         20;-128;53;-54
+ GAREA     Graphics area                     18;-120;53;-59
+ SATFIL    Satellite image filename(s)       
+ RADFIL    Radar image filename(s)           
+ SFPARM    Surface parameter list            tmpc;dwpc;pmsl;uwnd;vwnd
+ DATTIM    Date/time                         02/2000
+ SFFILE    Surface data file                 /data/gempak/surface/sao/960802.gem
+ COLORS    Color list                        31;5;5;6;3;31
+ MAP       Map color/dash/width              15/1/5
+ LATLON    Line color/dash/width/label/inc   0
+ MARKER    Marker color/type/size/width/hw   0
+ TITLE     Title color/line/title            31/-2/~ SURFACE THETA-E (K)
+ CLEAR     Clear screen flag                 yes
+ PANEL     Panel loc/color/dash/width/regn   0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   invgps|||C|P
+ PROJ      Map projection/angles/margins     lcc
+ FILTER    Filter data factor                0.8
+ TEXT      Text size/font/width/hw flag      1.0/2//hw
+ SKPMIS    Skip missing data flag            NO
+ Parameters requested: AREA,GAREA,SATFIL,RADFIL,SFPARM,DATTIM,SFFILE,COLORS,
+ MAP,LATLON,MARKER,TITLE,CLEAR,PANEL,DEVICE,PROJ,FILTER,TEXT,SKPMIS.
+ GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> AREA     = 20;-128;53;-54
+ GAREA    = 20;-116;51;-62
+ SATFIL   = 
+ RADFIL   = 
+ SFPARM   = skyc:0.6;tmpf;wsym:0.6;rmsl;;dwpf;brbk:0.5
+ DATTIM   = 02/2000
+ SFFILE   = /data/gempak/surface/sao/960802.gem
+ COLORS   = 31;5;5;6;3;31
+ MAP      = 15/1/3
+ LATLON   = 0
+ MARKER   = 0
+ TITLE    = 31/-2/~  SURFACE DATA
+ CLEAR    = yes
+ PANEL    = 0
+ DEVICE   = invgps|||C|P
+ PROJ     = lcc
+ FILTER   = 0.8
+ TEXT     = 0.53/2/1/hw
+ SKPMIS   = NO
+ GEMPAK-SFMAP> SFMAP PARAMETERS:
+
+ Data area:          20;-128;53;-54                                                          
+ Graphics area name: 20;-116;51;-62                                                          
+ Valid parameters:    SKYC TMPF WSYM RMSL BLNK DWPF BRBK
+ Parameter colors:    31    5    5    6    0    3   31 
+ Time:              960802/2000    
+ File:              /data/gempak/surface/sao/960802.gem                         
+ Map:               15/1/3                                                                  
+ Marker:            0                                                                       
+ Title:             31/-2/~  SURFACE DATA                                                   
+ Device:            invgps|||C|P                                                            
+ Projection:        lcc                                                                     
+ Clear screen:      YES
+ Filter:            YES
+ Filter factor:      0.80
+ Panel:             0                                                                       
+Enter <cr> to accept parameters or type EXIT: Parameters requested: AREA,GAREA,SATFIL,RADFIL,SFPARM,DATTIM,SFFILE,COLORS,
+ MAP,LATLON,MARKER,TITLE,CLEAR,PANEL,DEVICE,PROJ,FILTER,TEXT,SKPMIS.
+ GEMPAK-SFMAP>

@@ -1,0 +1,6 @@
+SFFILE  /data/gempak/surface/sao/000507_sao.gem                                 
+AREA    25;-130;50;-60                                                          
+DATTIM  all                                                                     
+SFPARM  tclo                                                                    
+OUTPUT  f/cloud                                                                 
+IDNTYP  STID                                                                    

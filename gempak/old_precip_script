@@ -1,0 +1,73 @@
+#!/bin/csh 
+########################################################
+#
+# Can be run from cron.
+# The first argument should be the target hour
+# 
+########################################################
+#
+# source the 5.2 environment variables 
+#
+source /usr/local/nawips/Gemenviron
+
+# Set the root Ntrans directory
+#
+# setenv NTRANSHOME ${NAWIPS}/nprogs/ntrans2.1
+#
+# cd to temporary directory. This is where the Nmeta file 
+# will be kept while the script is running.
+#
+cd data
+
+# Define current date
+#
+set yy=`date -u +%y`
+set mm=`date -u +%m`
+set dd=`date -u +%d`
+set date=${yy}${mm}${dd}
+
+# Set up local variables
+#
+# DATA_DIR=GEMPAK surface data directory;
+# META_DIR=Directory to store Meta files in
+# LOGFILE=file to catch GEMPAK program output
+#
+setenv DATA_DIR	/data/gempak/surface/sao
+setenv LOGFILE log_surface
+
+# Remove last hour's log file
+rm -f log_surface
+
+# Set some variables for GPMAP run
+#
+set grid=${DATA_DIR}/${date}_sao.gem
+set dd=`date -u +%d`
+set tmp=${grid:r}
+set time=${tmp:t}
+sleep 15
+
+#
+# Run sflist to extract precipitation amounts
+#
+$GEMEXE/sflist << EOF >> $LOGFILE
+\$RESPOND = YES
+SFFILE	= $grid
+SFPARM	= p24i
+AREA	= us
+DATTIM	= ${dd}/12
+OUTPUT	= f/precip
+run
+
+exit
+EOF
+
+#
+# Convert the files just made into tab-separated text
+#
+sed -e '1,$s/  */	/g' precip | cut -f2- > tmp.$$
+mv tmp.$$ precip
+
+#
+# Run GPEND to clean up
+#
+$GEMEXE/gpend

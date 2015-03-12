@@ -1,0 +1,63 @@
+#!/bin/csh 
+########################################################
+#
+# Can be run from cron.
+# The first argument should be the target hour
+# 
+########################################################
+#
+# source the 5.2 environment variables 
+#
+source /nawips/Gemenviron
+
+# Set the root Ntrans directory
+#
+# setenv NTRANSHOME ${NAWIPS}/nprogs/ntrans2.1
+#
+
+# Define current date
+#
+set yy=00
+set mm=05
+set dd=07
+set date=${yy}${mm}${dd}
+set hh=`date -u +%H`
+
+# Set up local variables
+#
+# DATA_DIR=GEMPAK surface data directory;
+# META_DIR=Directory to store Meta files in
+# LOGFILE=file to catch GEMPAK program output
+#
+setenv DATA_DIR	/data/gempak/surface/sao
+setenv LOGFILE log_cloud
+
+# Remove last hour's log file
+rm -f log_cloud
+
+# Set some variables for GPMAP run
+#
+set grid=${DATA_DIR}/${date}_sao.gem
+set tmp=${grid:r}
+set time=${tmp:t}
+sleep 15
+
+#
+# Run sflist to extract cloud cover data
+#
+$GEMEXE/sflist << EOF >> $LOGFILE
+\$RESPOND = YES
+SFFILE	= $grid
+SFPARM	= tclo
+AREA	= 25;-130;50;-60
+DATTIM	= all
+OUTPUT	= f/cloud
+run
+
+exit
+EOF
+
+#
+# Run GPEND to clean up
+#
+$GEMEXE/gpend

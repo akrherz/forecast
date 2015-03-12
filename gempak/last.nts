@@ -1,0 +1,7 @@
+GDFILE  data/tadv.grd                                                                                                                   
+LSTALL  YES                                                                                                                             
+OUTPUT  t                                                                                                                               
+GDATTIM ALL                                                                                                                             
+GLEVEL  ALL                                                                                                                             
+GVCORD  ALL                                                                                                                             
+GFUNC   ALL                                                                                                                             

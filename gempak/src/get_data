@@ -1,0 +1,3 @@
+#!/bin/csh
+nawk -v grid=$1 -f split.awk < city.list > ${1:r}.data
+cut -f1 city.list | paste - ${1:r}.data > ${1:r}.list

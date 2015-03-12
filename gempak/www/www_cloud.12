@@ -1,0 +1,9 @@
+ SFFILE    Surface data file                 /data/gempak/surface/sao/961108.gem
+ AREA      Data area                         ia*
+ DATTIM    Date/time                         08/11
+ SFPARM    Surface parameter list            tmpf;sped;drct
+ OUTPUT    Output device/filename            f/sf11
+ IDNTYP    STNM or STID                      STID
+ Parameters requested: SFFILE,AREA,DATTIM,SFPARM,OUTPUT,IDNTYP.
+ GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> Parameters requested: SFFILE,AREA,DATTIM,SFPARM,OUTPUT,IDNTYP.
+ GEMPAK-SFLIST> GEMPAK-SFLIST>

@@ -1,0 +1,17 @@
+#!/bin/csh
+cd /home/ldm/forecast/gempak
+if $# == 2 then
+	set date=$1
+	set sdate=$2
+else
+	set date=`date +%Y%m%d`
+	set sdate=`date +%y%m%d`
+endif
+
+./rh_script 00 ${date} ${sdate}
+./get_data data/hf${sdate}_00
+mv data/hf${sdate}_00.list fcst/raw
+
+./rh_script 12 ${date} ${sdate}
+./get_data data/hf${sdate}_12
+mv data/hf${sdate}_12.list fcst/raw

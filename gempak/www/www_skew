@@ -1,0 +1,84 @@
+ SNFILE    Sounding data file                /data/gempak/profiler/961015.gem
+ DATTIM    Date/time                         15/13
+ AREA      Data area                         ia*
+ SNPARM    Sounding parameter list           
+ LINE      Line color/type/width/label       31/1/1/1
+ PTYPE     Plot type/h:w ratio/margins       lin
+ VCOORD    Vertical coordinate type          hght
+ STNDEX    Stability indices                 lift;swet;kinx;totl;cape;cins;brch
+ STNCOL    Stability index color             15
+ WIND      Wind symbol/siz/wdth/typ/hdsz     bk30-7
+ WINPOS    Wind position                     1
+ MARKER    Marker color/type/size/width/hw   0
+ BORDER    Background color/dash/width       5
+ TITLE     Title color/line/title            0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   GF|rad.gif
+ YAXIS     Ystrt/ystop/yinc/lbl;gln;tck      500/12000/1000
+ XAXIS     Xstrt/xstop/xinc/lbl;gln;tck      -40/40/10/1;1;0
+ FILTER    Filter data factor                0.7
+ CLEAR     Clear screen flag                 no
+ PANEL     Panel loc/color/dash/width/regn   0
+ TEXT      Text size/font/width/hw flag      1/2/1/hw
+ THTALN    THTA color/dash/width/mn/mx/inc   4/1/1
+ THTELN    THTE color/dash/width/mn/mx/inc   4/2/1
+ MIXRLN    MIXR color/dash/width/mn/mx/inc   2/2/1
+ Parameters requested: SNFILE,DATTIM,AREA,SNPARM,LINE,PTYPE,VCOORD,STNDEX,
+ STNCOL,WIND,WINPOS,MARKER,BORDER,TITLE,DEVICE,YAXIS,XAXIS,FILTER,CLEAR,
+ PANEL,TEXT,THTALN,THTELN,MIXRLN.
+ GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> SNFILE   = /data/gempak/upperair/961015.gem
+ DATTIM   = 15/12
+ AREA     = @oax
+ SNPARM   = tmpc;dwpc
+ LINE     = 3
+ PTYPE    = skewt
+ VCOORD   = pres
+ STNDEX   = lift;swet;kinx;totl;cape;cins;brch
+ STNCOL   = 15
+ WIND     = bk27/.8/1//.5
+ WINPOS   = 1
+ MARKER   = 0
+ BORDER   = 31
+ TITLE    = 5/-0/ SKEW-T FROM OMAHA, NE
+ DEVICE   = invgps|||C|P
+ YAXIS    = 1020/100//1;1;0
+ XAXIS    = -40/40/10/1;1;0
+ FILTER   = no
+ CLEAR    = yes
+ PANEL    = 0
+ TEXT     = 0.8/2//hw
+ THTALN   = 4/1/1
+ THTELN   = 4/2/1
+ MIXRLN   = 2/2/1
+ GEMPAK-SNPROF> Next plot - Time: 961015/1200          Station:  72558   OAX     
+Enter <cr> to accept parameters or type EXIT: Parameters requested: SNFILE,DATTIM,AREA,SNPARM,LINE,PTYPE,VCOORD,STNDEX,
+ STNCOL,WIND,WINPOS,MARKER,BORDER,TITLE,DEVICE,YAXIS,XAXIS,FILTER,CLEAR,
+ PANEL,TEXT,THTALN,THTELN,MIXRLN.
+ GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> GEMPAK-SNPROF> SNFILE   = /data/gempak/upperair/961015.gem
+ DATTIM   = 15/12
+ AREA     = @dvn
+ SNPARM   = tmpc;dwpc
+ LINE     = 3
+ PTYPE    = skewt
+ VCOORD   = pres
+ STNDEX   = lift;swet;kinx;totl;cape;cins;brch
+ STNCOL   = 15
+ WIND     = bk27/.8/1//.5
+ WINPOS   = 1
+ MARKER   = 0
+ BORDER   = 15
+ TITLE    = 5/-0/ SKEW-T FROM DAVENPORT, IA
+ DEVICE   = invgps|||C|P
+ YAXIS    = 1020/100//1;1;0
+ XAXIS    = -40/40/10/1;1;0
+ FILTER   = no
+ CLEAR    = yes
+ PANEL    = 0
+ TEXT     = 0.8/2//hw
+ THTALN   = 4/1/1
+ THTELN   = 4/2/1
+ MIXRLN   = 2/2/1
+ GEMPAK-SNPROF> Next plot - Time: 961015/1200          Station:  74455   DVN     
+Enter <cr> to accept parameters or type EXIT: Parameters requested: SNFILE,DATTIM,AREA,SNPARM,LINE,PTYPE,VCOORD,STNDEX,
+ STNCOL,WIND,WINPOS,MARKER,BORDER,TITLE,DEVICE,YAXIS,XAXIS,FILTER,CLEAR,
+ PANEL,TEXT,THTALN,THTELN,MIXRLN.
+ GEMPAK-SNPROF>

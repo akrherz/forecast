@@ -1,0 +1,97 @@
+ GDFILE    Grid file                         tadv.grd
+ DELTAN    Station spacing                   1
+ DELTAX    X spacing                         1
+ DELTAY    Y spacing                         1
+ GRDAREA   Area covered by grid              25;-130;50;-60
+ EXTEND    Points to extend grid             2;2;2;2;
+ DTAAREA   Data area for OA                  
+ SOURCE    Data source (SN or SF)            SF
+ SNFILE    Sounding data file                /data/gempak/upperair/961108.gem
+ SFFILE    Surface data file                 /data/gempak/surface/sao/961108.gem
+ SNPARM    Sounding parameter list           relh;tmpc
+ SFPARM    Surface parameter list            tmpf;sped;drct
+ DATTIM    Date/time                         08/12
+ LEVELS    Vertical levels                   1
+ MAXGRD    Maximum number of grids           200
+ Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID>
+                    OBJECTIVE ANALYSIS PARAMETERS
+
+ GRIDAREA           25.00   -130.00     50.00    -60.00  (       50.00  -60.00)
+ DELTAN              1.000
+ DELTAX              1.000
+ DELTAY              1.000
+
+ GRID POINTS     X :  71  ( 2, 2 )        Y :  26  ( 2, 2 )
+ EXTENDAREA           23.00   -132.00     52.00    -58.00
+ DATAAREA             23.00   -132.00     52.00    -58.00
+
+Enter <cr> to accept parameters or type EXIT: [FL 126]  The file temp.grd already exists.
+ [DM -1]  File temp.grd cannot be created.
+ [GD -1]  File temp.grd cannot be created.
+ Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> SNFILE    Sounding data file                /data/gempak/upperair/961108.gem
+ GDFILE    Grid file                         temp.grd
+ SNPARM    Sounding parameter list           relh;tmpc
+ STNDEX    Stability indices                 SHOW
+ LEVELS    Vertical levels                   850;500
+ VCOORD    Vertical coordinate type          PRES
+ DATTIM    Date/time                         08/12
+ DTAAREA   Data area for OA                  
+ GUESS     Guess file^time                   
+ GAMMA     Convergence parameter             0.3
+ SEARCH    Search radius/Extrapolation       20
+ NPASS     Number of passes                  2
+ Parameters requested: SNFILE,GDFILE,SNPARM,STNDEX,LEVELS,VCOORD,DATTIM,
+ DTAAREA,GUESS,GAMMA,SEARCH,NPASS.
+ GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND>
+ OABSND PARAMETERS: 
+
+ Output grid file:        temp.grd
+ Number of x, y points:    71    26
+ Grid bnds:     25.00  -130.00    50.00   -60.00 Grid xtnd:    2   2   2   2
+ Station spacing:           1.00
+ No first guess file is requested. 
+ Sounding file:           /data/gempak/upperair/961108.gem
+ Data area:               23.00;-132.00;52.00;-58.00
+ Level parameters:        RELH  TMPC
+ Levels:                   850     500
+ Vertical coordinate:     PRES                                                                    
+ Station parameters:      SHOW
+ Time:                   961108/1200         
+ GAMMA: 0.30   SEARCH:  20.00  NPASS:  2
+ No data extrapolation will occur. 
+Enter <cr> to accept parameters or type EXIT:
+ Processing data at time 961108/1200         
+
+   RMS values for pass  1
+ PARAMETER:     RELH    TMPC    RELH    TMPC    SHOW
+ LEVEL:          850     850     500     500       0
+ RMS:           3.47    0.30    4.84    0.29    0.78
+ #STN:            60      60      64      64      60
+
+   RMS values for pass  2
+ PARAMETER:     RELH    TMPC    RELH    TMPC    SHOW
+ LEVEL:          850     850     500     500       0
+ RMS:           0.28    0.02    1.61    0.05    0.09
+ #STN:            15      15      15      15      15
+ Parameters requested: SNFILE,GDFILE,SNPARM,STNDEX,LEVELS,VCOORD,DATTIM,
+ DTAAREA,GUESS,GAMMA,SEARCH,NPASS.
+ GEMPAK-OABSND> GDATTIM   Grid date/time                    08/12
+ GLEVEL    Grid level                        0
+ GVCORD    Grid vertical coordinate          none
+ GFUNC     Scalar grid                       mul(3600., adv(tmpf;wnd))
+ GDFILE    Grid file                         temp.grd
+ GAREA     Graphics area                     WV
+ PROJ      Map projection/angles/margins     lcc
+ SCALE     Scalar scale / vector scale       0
+ OUTPUT    Output device/filename            f/sf12
+ Parameters requested: GDATTIM,GLEVEL,GVCORD,GFUNC,GDFILE,GAREA,PROJ,SCALE,
+ OUTPUT.
+ GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> [NT -7]  ?GFUNC is an unrecognized parameter.
+ GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> [DG -23]  LEVEL @850;500 in ADV is invalid.
+ Parameters requested: GDATTIM,GLEVEL,GVCORD,GFUNC,GDFILE,GAREA,PROJ,SCALE,
+ OUTPUT.
+ GEMPAK-GDLIST> GEMPAK-GDLIST>

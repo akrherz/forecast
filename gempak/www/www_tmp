@@ -1,0 +1,98 @@
+ AREA      Data area                         ia*
+ GAREA     Graphics area                     dmx*
+ SATFIL    Satellite image filename(s)       
+ RADFIL    Radar image filename(s)           /data/nexrad/dmx/9610151215.DMX
+ SFPARM    Surface parameter list            stid
+ DATTIM    Date/time                         15/12
+ SFFILE    Surface data file                 /data/gempak/surface/sao/961015.gem
+ COLORS    Color list                        7
+ MAP       Map color/dash/width              21/1/5
+ LATLON    Line color/dash/width/label/inc   0
+ MARKER    Marker color/type/size/width/hw   0
+ TITLE     Title color/line/title            0
+ CLEAR     Clear screen flag                 no
+ PANEL     Panel loc/color/dash/width/regn   0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   GF|rad.gif
+ PROJ      Map projection/angles/margins     rad
+ FILTER    Filter data factor                0.7
+ TEXT      Text size/font/width/hw flag      1/2/1/hw
+ SKPMIS    Skip missing data flag            NO
+ Parameters requested: AREA,GAREA,SATFIL,RADFIL,SFPARM,DATTIM,SFFILE,COLORS,
+ MAP,LATLON,MARKER,TITLE,CLEAR,PANEL,DEVICE,PROJ,FILTER,TEXT,SKPMIS.
+ GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> AREA     = 20;-128;53;-54
+ GAREA    = 20;-116;51;-62
+ SATFIL   = 
+ RADFIL   = 
+ SFPARM   = tmpf
+ DATTIM   = 15/11
+ SFFILE   = /data/gempak/surface/sao/961015.gem
+ COLORS   = 5
+ MAP      = 15/1/3
+ LATLON   = 0
+ MARKER   = 0
+ TITLE    = 31/-2/~  6 AM SURFACE TEMPERATURE
+ CLEAR    = yes
+ PANEL    = 0
+ DEVICE   = invgps|||C|P
+ PROJ     = lcc
+ FILTER   = 0.8
+ TEXT     = 0.63/2/1/hw
+ SKPMIS   = NO
+ GEMPAK-SFMAP> SFMAP PARAMETERS:
+
+ Data area:          20;-128;53;-54                                                          
+ Graphics area name: 20;-116;51;-62                                                          
+ Valid parameters:    TMPF
+ Parameter colors:     5 
+ Time:              961015/1100    
+ File:              /data/gempak/surface/sao/961015.gem                         
+ Map:               15/1/3                                                                  
+ Marker:            0                                                                       
+ Title:             31/-2/~  6 AM SURFACE TEMPERATURE                                       
+ Device:            invgps|||C|P                                                            
+ Projection:        lcc                                                                     
+ Clear screen:      YES
+ Filter:            YES
+ Filter factor:      0.80
+ Panel:             0                                                                       
+Enter <cr> to accept parameters or type EXIT: Parameters requested: AREA,GAREA,SATFIL,RADFIL,SFPARM,DATTIM,SFFILE,COLORS,
+ MAP,LATLON,MARKER,TITLE,CLEAR,PANEL,DEVICE,PROJ,FILTER,TEXT,SKPMIS.
+ GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> AREA     = dset
+ GAREA    = 20;-116;51;-62
+ SATFIL   = 
+ RADFIL   = 
+ SFPARM   = p24i
+ DATTIM   = 15/12
+ SFFILE   = /data/gempak/surface/sao/961015.gem
+ COLORS   = 5
+ MAP      = 15/1/2
+ LATLON   = 0
+ MARKER   = 0
+ TITLE    = 31/-2/~  24 HR PRECIPITATION (INCHES)
+ CLEAR    = yes
+ PANEL    = 0
+ DEVICE   = invgps|||C|P
+ PROJ     = lcc
+ FILTER   = 0.55
+ TEXT     = 0.63/2/1/hw
+ SKPMIS   = NO
+ GEMPAK-SFMAP> SFMAP PARAMETERS:
+
+ Data area:          dset                                                                    
+ Graphics area name: 20;-116;51;-62                                                          
+ Valid parameters:    P24I
+ Parameter colors:     5 
+ Time:              961015/1200    
+ File:              /data/gempak/surface/sao/961015.gem                         
+ Map:               15/1/2                                                                  
+ Marker:            0                                                                       
+ Title:             31/-2/~  24 HR PRECIPITATION (INCHES)                                   
+ Device:            invgps|||C|P                                                            
+ Projection:        lcc                                                                     
+ Clear screen:      YES
+ Filter:            YES
+ Filter factor:      0.55
+ Panel:             0                                                                       
+Enter <cr> to accept parameters or type EXIT: Parameters requested: AREA,GAREA,SATFIL,RADFIL,SFPARM,DATTIM,SFFILE,COLORS,
+ MAP,LATLON,MARKER,TITLE,CLEAR,PANEL,DEVICE,PROJ,FILTER,TEXT,SKPMIS.
+ GEMPAK-SFMAP> GEMPAK-SFMAP>

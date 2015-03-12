@@ -1,0 +1,123 @@
+#!/bin/csh 
+########################################################
+#
+# Can be run from cron.
+# The first argument should be the target hour
+# 
+########################################################
+#
+# source the 5.2 environment variables 
+#
+source /usr/local/nawips/Gemenviron
+
+# Set the root Ntrans directory
+#
+# setenv NTRANSHOME ${NAWIPS}/nprogs/ntrans2.1
+#
+# cd to temporary directory. This is where the Nmeta file 
+# will be kept while the script is running.
+#
+cd data
+
+# Define current date
+#
+#set yy=`date -u +%y`
+#set mm=`date -u +%m`
+#set dd=`date -u +%d`
+#set date=${yy}${mm}${dd}
+#set hh=`date -u +%H`
+
+# Set up local variables
+#
+# DATA_DIR=GEMPAK surface data directory;
+# META_DIR=Directory to store Meta files in
+# LOGFILE=file to catch GEMPAK program output
+#
+setenv DATA_DIR	/data/gempak/upperair
+setenv LOGFILE log_temp.${1}
+
+# Remove last hour's log file
+rm -f log_temp.${1} temp.grd
+
+# Set some variables for GPMAP run
+#
+set device="GPS|temp.ps"
+#set grid=`ls -1t ${DATA_DIR}/*.gem | head -1`
+set grid=${DATA_DIR}/${2}_upa.gem
+set tmp=${grid:r}
+set time=${tmp:t}
+sleep 15
+
+#
+# Run OAGRID as step 1
+#
+$GEMEXE/oagrid << EOF >> $LOGFILE
+\$RESPOND = YES
+SNFILE	= $grid
+GDFILE	= temp.grd
+DELTAN	= 3.5
+DELTAX	= 1
+DELTAY	= 1
+GRDAREA	= 25;-130;50;-60
+GAREA	= 25;-130;50;-60
+EXTEND	= 9;9;9;9;
+SOURCE	= SN
+SNPARM	= relh;tmpc
+GFUNC   = relh;tmpc
+DATTIM	= ${3}/${1}
+DEVICE	= $device
+LEVELS	= 850;500
+MAXGRD	= 200
+CLEAR	= yes
+run
+
+exit
+EOF
+
+#
+# Run OABSND as step 2
+#
+$GEMEXE/oabsnd << EOF >> $LOGFILE
+\$RESPOND = YES
+SNFILE	= $grid
+GDFILE	= temp.grd
+SNPARM	= relh;tmpc
+DATTIM	= ${3}/${1}
+DEVICE	= $device
+LEVELS	= 850;500
+GAMMA	= 0.3
+SEARCH	= 20
+NPASS	= 2
+CLEAR	= yes
+run
+
+exit
+EOF
+
+#
+# Run GDLIST as step 3
+#
+$GEMEXE/gdlist << EOF >> $LOGFILE
+\$RESPOND = YES
+GDATTIM	= ${3}/${1}
+GLEVEL	= 850;500
+GVCORD	= press
+GFUNC	= sub(tmpc@850, tmpc@500)
+GDFILE	= temp.grd
+GRDAREA	= 25;-130;50;-60
+GAREA	= 25;-130;50;-60
+PROJ	= lcc
+SCALE	= 0
+OUTPUT	= f/tf${3}_${1}
+run
+
+exit
+EOF
+
+#
+# Run GPEND to clean up
+#
+$GEMEXE/gpend
+#
+# Rename ps file to indicate sfc data
+#mv temp.ps /disk3/data/unidata

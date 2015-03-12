@@ -1,0 +1,147 @@
+#!/bin/csh
+cd /disk3/data/fcst
+set path=(~/bin $path)
+rehash
+
+setenv DAY `date -u +%y%m%d`
+setenv YESTERDAY `ystrd`
+setenv DD `date +%d`
+setenv YD `yday`
+# It is assumed that the timezone is west of GMT...
+
+foreach city (`cat target.list`)
+
+# Station Identification
+	echo STATION=K${city}
+
+# 12Z cloudiness
+	rm -f $$.tmp
+	foreach hour (7 8 9 10 11 12)
+		grep $city raw/cloud.${hour} | cut -f2 - >> $$.tmp
+	end
+	grep 0.75 < $$.tmp | wc -l > $$.t1
+	grep 1.00 < $$.tmp | wc -l > $$.t2
+	if (`cat $$.t1` + `cat $$.t2` >= 3) then
+		echo CLOUD_12=1
+	else
+		echo CLOUD_12=2
+	endif
+	rm -f $$.tmp $$.t1 $$.t2
+
+# 18Z cloudiness
+	rm -f $$.tmp
+	foreach hour (15 16 17 18)
+		grep $city raw/cloud.${hour} | cut -f2 - >> $$.tmp
+	end
+	grep 0.75 < $$.tmp | wc -l > $$.t1
+	grep 1.00 < $$.tmp | wc -l > $$.t2
+	if (`cat $$.t1` + `cat $$.t2` >= 2) then
+		echo CLOUD_18=1
+	else
+		echo CLOUD_18=2
+	endif
+	rm -f $$.tmp $$.t1 $$.t2
+
+# 12Z advection
+	echo a = `grep $city raw/af11.list | cut -f2 -` + \
+		`grep $city raw/af12.list | cut -f2 -` > $$.tmp
+	echo ADVECT_12=`cat $$.tmp src/advect.bc | bc`
+	rm -f $$.tmp
+
+# 18Z advection
+	echo a = `grep $city raw/af17.list | cut -f2 -` + \
+		`grep $city raw/af18.list | cut -f2 -` > $$.tmp
+	echo ADVECT_18=`cat $$.tmp src/advect.bc | bc`
+	rm -f $$.tmp
+
+#
+# Precipitation Influences
+#
+
+# moisture supply
+	set moisture=0
+# The relative humidity at 850mb must exceed X at any of these times:
+# 12Z yesterday, 00Z today, 12Z today.  If I knew what X was, I could
+# proceed.
+#  X is 0.80.
+	set FP
+
+# humidity
+	foreach hour (0 12)
+		set RH=`grep $city raw/hf${DD}_${hour}.list | cut -f2 -`
+		echo a = ${RH} > $$.tmp
+		echo "if (a >= 0.8) 1" >> $$.tmp
+		echo "if (a < 0.8)  0" >> $$.tmp
+		if (`bc < $$.tmp` == 1) then
+			set FP=,1
+		endif
+		rm -f $$.tmp
+	end
+
+# frontal passage
+	grep $city raw/${DAY}{1{2,3,4,5,6,7,8},2{0,1,2,3}}.* \
+		raw/${YESTERDAY}{0*,10,11}.* | grep close > $$.tmp
+	if (`wc -l < $$.tmp` > 0) then
+		set FP=${FP},2
+	endif
+	rm -f $$.tmp
+
+# unstable atmosphere
+	set foo=`grep $city raw/tf0.list | cut -f2 -`
+	if (${foo:r} >= 25) then
+		set FP=${FP},3
+	endif
+
+# combine the precipitation influence answers
+	if (${FP} == "") then
+		echo FAVOR_PRECIP=0
+	else
+		echo FAVOR_PRECIP=`echo ${FP} | sed -e '1,$s/^,//g'`
+	endif
+
+# fronts
+	foreach type (COLD OCFNT STNRY WARM)
+		foreach hour (10 13 16 19)
+			set FILE=raw/${DAY}${hour}.${type}
+			set RANGE=`grep $city $FILE | cut -f2 -`
+			echo FRONT_${type}_${hour}=${RANGE}
+		end
+	end
+
+# temperature difference
+	foreach hour (0 12)
+		set DT=`grep $city raw/tf${hour}.list | cut -f2 -`
+		echo DELTA_T_${hour}=${DT}
+	end
+
+# surface temperature
+	foreach hour (00 06 12 18)
+		set ST=`grep $city raw/surface.list | grep /${hour} | cut -f3 | awk -f ~/bin/spread.awk`
+		echo TEMP_${hour}=${ST}
+	end
+
+# surface dewpoint
+	foreach hour (00 06 12 18)
+		set DP=`grep $city raw/surface.list | grep /${hour} | cut -f4 | awk -f ~/bin/spread.awk`
+		echo DEWP_${hour}=${DP}
+	end
+
+# wind direction
+	set WD=`grep $city raw/surface.list | grep /18 | cut -f5`
+	echo WDIR_18=`ntodir ${WD}`
+
+# wind speed
+	set SP=`grep $city raw/surface.list | grep /18 | cut -f6 | awk -f ~/bin/spread.awk`
+	echo WSPD_18=${SP}
+
+# precipitation
+	set PRECIP=`grep $city raw/precip.list | cut -f3`
+	if ${PRECIP} == -9999.00 then
+		echo PRECIP=2
+	else if ${PRECIP} == '' then
+		echo PRECIP=2
+	else
+		echo PRECIP=1
+	endif
+
+end

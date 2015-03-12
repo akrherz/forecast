@@ -1,0 +1,5 @@
+#!/bin/sh
+grep "IA US  K" city_sfc.dat | sed -e '1,$s/^.......................//g' \
+	> $$.tmp
+sed -e '1,$s/  */	/g' $$.tmp > $$.tmp2; rm $$.tmp
+cut -f1,3,4 $$.tmp2 > city.list; rm $$.tmp2

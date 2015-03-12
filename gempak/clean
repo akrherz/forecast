@@ -1,0 +1,4 @@
+#!/bin/sh
+./cloud_script $1 $2 $3
+sed -e '1,$s/  */	/g' data/cloud.$3$1 | cut -f2,4 | grep \[0-9\] \
+	> fcst/raw/cloud.$3$1

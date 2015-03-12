@@ -1,0 +1,133 @@
+#!/bin/csh 
+
+########################################################
+#
+# Can be run from cron.
+# The first argument should be the target hour
+# 
+########################################################
+#
+# source the 5.2 environment variables 
+#
+source /usr/local/nawips/Gemenviron
+
+# Set the root Ntrans directory
+#
+# setenv NTRANSHOME ${NAWIPS}/nprogs/ntrans2.1
+#
+# cd to temporary directory. This is where the Nmeta file 
+# will be kept while the script is running.
+#
+cd data
+
+# Define current date
+#
+#set dd=`date -u +%d`
+set date=${2}
+set sdate=${3}
+
+# Set up local variables
+#
+# DATA_DIR=GEMPAK surface data directory;
+# META_DIR=Directory to store Meta files in
+# LOGFILE=file to catch GEMPAK program output
+#
+setenv DATA_DIR	/data/gempak/surface/sao
+setenv LOGFILE log_adv.${1}
+
+# Set some variables for GPMAP run
+#
+set device="GPS|adv.ps"
+set grid=${DATA_DIR}/${date}_sao.gem
+set tmp=${grid:r}
+set time=${tmp:t}
+#sleep 15
+
+rm -f tadv.grd
+#
+# Run OAGRID as step 1
+#
+oagrid << EOF > $LOGFILE
+\$RESPOND = YES
+SFFILE	= $grid
+SNFILE	= 
+GDFILE	= tadv.grd
+DELTAN	= 3.5
+DELTAX	= 1
+DELTAY	= 1
+GLEVEL	= 0
+GRDAREA	= 25;-130;50;-60
+GAREA	= 25;-130;50;-60
+DTAAREA = 25;-130;50;-60
+EXTEND	= 9;9;9;9;
+SOURCE	= SF
+SFPARM	= tmpf;sped;drct
+GFUNC   = tmpf;sped;drct
+DATTIM	= ${sdate}/${1}
+LEVELS	= 0
+GVCORD	= none
+MAXGRD	= 200
+CLEAR	= yes
+list
+run
+
+
+exit
+EOF
+
+echo >> $LOGFILE
+echo >> $LOGFILE
+
+#
+# Run OABSFC as step 2
+#
+$GEMEXE/oabsfc << EOF >> $LOGFILE
+\$RESPOND = YES
+SFFILE	= $grid
+GLEVEL	= 0
+GVCORD	= none
+GDFILE	= tadv.grd
+SFPARM	= tmpf;sped;drct
+DATTIM	= ${sdate}/${1}
+DEVICE	= $device
+DEVICE	= $device
+GAMMA	= 0.3
+SEARCH	= 20
+NPASS	= 2
+CLEAR	= yes
+list
+run
+
+
+exit
+EOF
+
+echo >> $LOGFILE
+echo >> $LOGFILE
+
+#
+# Run GDLIST as step 3
+#
+$GEMEXE/gdlist << EOF >> $LOGFILE
+\$RESPOND = YES
+GDATTIM	= ${sdate}/${1}
+GLEVEL	= 0
+GVCORD	= none
+GFUNC	= mul(3600., adv(tmpf;wnd))
+GDFILE	= tadv.grd
+GRDAREA	= 25;-130;50;-60
+GAREA	= 25;-130;50;-60
+PROJ	= lcc
+SCALE	= 0
+OUTPUT	= f/af${sdate}${1}
+list
+run
+
+
+exit
+EOF
+
+#
+# Run GPEND to clean up
+#
+$GEMEXE/gpend

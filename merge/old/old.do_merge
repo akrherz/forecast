@@ -1,0 +1,58 @@
+#!/bin/csh
+cd ~/forecast/merge
+
+if $#argv == 3 then
+	set today=$1
+	set yesterday=$2
+	set out=out/$3
+	set target=/fcst/20$3
+else
+	set today=`date --date='1 day ago' +%y%m%d`
+	set yesterday=`date --date='2 day ago' +%y%m%d`
+	set out=out/`date --date='3 days ago' +%y%m%d`
+	set target=/fcst/`date --date='3 days ago' +%Y%m%d`
+endif
+
+## Eastern
+#set output=${out}-east.out
+#set final=${target}-east.out
+#./merge-east.pl ${today} ${yesterday} > $output
+#if -z ${output} then
+#	echo ${output} | mail -s "Eastern verification failure" \
+#		geff@iastate.edu
+#else
+#	cp ${output} ${final}
+#endif
+
+# Central
+set output=${out}.out
+set final=${target}.out
+./merge.pl ${today} ${yesterday} > $output
+if -z ${output} then
+	echo ${output} | mail -s "Central verification failure" \
+		geff@iastate.edu
+else
+	cp ${output} ${final}
+endif
+
+## Mountain
+#set output=${out}-mountain.out
+#set final=${target}-mountain.out
+#./merge-mountain.pl ${today} ${yesterday} > $output
+#if -z ${output} then
+#	echo ${output} | mail -s "Mountain verification failure" \
+#		geff@iastate.edu
+#else
+#	cp ${output} ${final}
+#endif
+
+## Pacific
+#set output=${out}-pacific.out
+#set final=${target}-pacific.out
+#./merge-pacific.pl ${today} ${yesterday} > $output
+#if -z ${output} then
+#	echo ${output} | mail -s "Pacific verification failure" \
+#		geff@iastate.edu
+#else
+#	cp ${output} ${final}
+#endif

@@ -1,0 +1,25 @@
+#!/bin/csh
+set input=full_list
+
+# extract station ID and lat/lon data
+cut -c1-5,56-67 ${input} | sed -e '1,$s/  */	/g' > tmp.list
+
+# separate the variables for easy access
+cut -f1 tmp.list > tmp.name
+cut -f2 tmp.list > tmp.lat
+cut -f3 tmp.list > tmp.lon
+
+# round latitude
+rm -f new.lat
+foreach num (`cat tmp.lat`)
+	sed -e 1,\$s/%a/$num/g < round.bc | bc >> new.lat
+end
+
+# round longitude
+rm -f new.lon
+foreach num (`cat tmp.lon`)
+	sed -e 1,\$s/%a/$num/g < round.bc | bc >> new.lon
+end
+
+# combine the data
+paste tmp.name new.lat new.lon > city.list

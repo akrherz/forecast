@@ -1,0 +1,238 @@
+ GDFILE    Grid file                         file1.grd
+ DELTAN    Station spacing                   1.1
+ DELTAX    X spacing                         0.63
+ DELTAY    Y spacing                         0.63
+ GRDAREA   Area covered by grid              15;-140;60;-50
+ EXTEND    Points to extend grid             2;2;2;2
+ DTAAREA   Data area for OA                  15;-140;60;-50
+ SOURCE    Data source (SN or SF)            SF
+ SNFILE    Sounding data file                /data/gempak/upperair/960429.gem
+ SFFILE    Surface data file                 /data/gempak/surface/sao/961015.gem
+ SNPARM    Sounding parameter list           tmpc;hght;uwnd;vwnd
+ SFPARM    Surface parameter list            stid
+ DATTIM    Date/time                         15/14
+ LEVELS    Vertical levels                   0
+ MAXGRD    Maximum number of grids           200
+ Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GDFILE   = file3.grd
+ DELTAN   = 2.2
+ DELTAX   = 0.63
+ DELTAY   = 0.63
+ GRDAREA  = 15;-140;60;-50
+ EXTEND   = 2;2;2;2
+ DTAAREA  = 15;-140;60;-50
+ SOURCE   = SN
+ SNFILE   = /data/gempak/upperair/961015.gem
+ SFFILE   = /data/gempak/surface/sao/960501.gem
+ SNPARM   = tmpc;hght;uwnd;vwnd
+ SFPARM   = tmpc;dwpc;pmsl;uwnd;vwnd
+ DATTIM   = 1200
+ LEVELS   = 300;200
+ MAXGRD   = 200
+ GEMPAK-OAGRID>
+                    OBJECTIVE ANALYSIS PARAMETERS
+
+ GRIDAREA           15.00   -140.00     59.73    -50.54  (       60.00  -50.00)
+ DELTAN              2.200
+ DELTAX              0.630
+ DELTAY              0.630
+
+ GRID POINTS     X : 143  ( 2, 2 )        Y :  72  ( 2, 2 )
+ EXTENDAREA           13.74   -141.26     60.99    -49.28
+ DATAAREA             15.00   -140.00     60.00    -50.00
+
+Enter <cr> to accept parameters or type EXIT: Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> GEMPAK-OAGRID> SNFILE    Sounding data file                /data/gempak/upperair/961015.gem
+ GDFILE    Grid file                         file3.grd
+ SNPARM    Sounding parameter list           tmpc;hght;uwnd;vwnd
+ STNDEX    Stability indices                 lift;swet;kinx;totl;cape;cins;brch
+ LEVELS    Vertical levels                   300;200
+ VCOORD    Vertical coordinate type          PRES
+ DATTIM    Date/time                         1200
+ DTAAREA   Data area for OA                  15;-140;60;-50
+ GUESS     Guess file^time                   
+ GAMMA     Convergence parameter             0.3
+ SEARCH    Search radius/Extrapolation       20/EX
+ NPASS     Number of passes                  2
+ Parameters requested: SNFILE,GDFILE,SNPARM,STNDEX,LEVELS,VCOORD,DATTIM,
+ DTAAREA,GUESS,GAMMA,SEARCH,NPASS.
+ GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> SNFILE   = /data/gempak/upperair/961015.gem
+ GDFILE   = file3.grd
+ SNPARM   = tmpc;hght;uwnd;vwnd
+ STNDEX   = lift;swet;kinx;totl;cape;cins;brch
+ LEVELS   = 300;200
+ VCOORD   = PRES
+ DATTIM   = 1200
+ DTAAREA  = 15;-140;60;-50
+ GUESS    = 
+ GAMMA    = 0.3
+ SEARCH   = 20/EX
+ NPASS    = 2
+ GEMPAK-OABSND> [OABSND 6]  WARNING:  Area is not DATA area in file.
+
+ OABSND PARAMETERS: 
+
+ Output grid file:        file3.grd
+ Number of x, y points:   143    72
+ Grid bnds:     15.00  -140.00    59.73   -50.54 Grid xtnd:    2   2   2   2
+ Station spacing:           2.20
+ No first guess file is requested. 
+ Sounding file:           /data/gempak/upperair/961015.gem
+ Data area:               15;-140;60;-50
+ Level parameters:        TMPC  HGHT  UWND  VWND
+ Levels:                   300     200
+ Vertical coordinate:     PRES                                                                    
+ Station parameters:      LIFT  SWET  KINX  TOTL  CAPE  CINS  BRCH
+ Time:                   961015/1200         
+ GAMMA: 0.30   SEARCH:  20.00  NPASS:  2
+ Data extrapolation may occur. 
+Enter <cr> to accept parameters or type EXIT:
+ Processing data at time 961015/1200         
+
+   RMS values for pass  1
+ PARAMETER:     TMPC    HGHT    UWND    VWND    TMPC    HGHT    UWND    VWND
+ LEVEL:          300     300     300     300     200     200     200     200
+ RMS:           0.74   22.15    3.17    3.51    1.12   19.48    2.37    1.91
+ #STN:            96      96      93      93      95      95      88      88
+ PARAMETER:     LIFT    SWET    KINX    TOTL    CAPE    CINS    BRCH
+ LEVEL:            0       0       0       0       0       0       0
+ RMS:           1.74   24.19    7.10    4.49  110.39   35.99   36.46
+ #STN:            96      88      90      90      96      96      96
+
+   RMS values for pass  2
+ PARAMETER:     TMPC    HGHT    UWND    VWND    TMPC    HGHT    UWND    VWND
+ LEVEL:          300     300     300     300     200     200     200     200
+ RMS:           0.16    4.13    0.59    0.73    0.29    4.61    0.48    0.38
+ #STN:            91      91      88      88      90      90      83      83
+ PARAMETER:     LIFT    SWET    KINX    TOTL    CAPE    CINS    BRCH
+ LEVEL:            0       0       0       0       0       0       0
+ RMS:           0.40    5.71    3.13    1.58   50.53    9.36   13.42
+ #STN:            91      83      85      85      91      91      91
+ Parameters requested: SNFILE,GDFILE,SNPARM,STNDEX,LEVELS,VCOORD,DATTIM,
+ DTAAREA,GUESS,GAMMA,SEARCH,NPASS.
+ GEMPAK-OABSND> GDFILE    Grid file                         file3.grd
+ GDATTIM   Grid date/time                    15/1400
+ GLEVEL    Grid level                        0
+ GVCORD    Grid vertical coordinate          none
+ PANEL     Panel loc/color/dash/width/regn   0
+ SKIP      Skip_cntr/skip_plt_x;skip_plt_y   /4/4
+ SCALE     Scalar scale / vector scale       
+ GFUNC     Scalar grid                       thte(pmsl,tmpc,dwpc)
+ CTYPE     Contour type:  C/F                c/f
+ CONTUR    Subbox/smooth                     
+ CINT      Contour interval/min/max          4
+ LINE      Line color/type/width/label       1/1/1
+ FINT      Fill interval/min/max             4
+ FLINE     Fill colors                       30-16--1;14-3--1
+ HILO      Color/symbol/rng/rad/cnt/intp     
+ HLSYM     HILO txt size/posn/font/wdth/hw   2;1.5//21//hw
+ CLRBAR    Color/ornt/anch/x;y/ln;wd/freq    0
+ GVECT     Vector grid                       WND
+ WIND      Wind symbol/siz/wdth/typ/hdsz     bk1/1.0/3
+ REFVEC    Mag;x;y;txtsiz/font/wdth/HW;labl  
+ TITLE     Title color/line/title            0
+ TEXT      Text size/font/width/hw flag      1/2/1/hw
+ CLEAR     Clear screen flag                 no
+ GAREA     Graphics area                     dmx*
+ SATFIL    Satellite image filename(s)       
+ RADFIL    Radar image filename(s)           /data/nexrad/dmx/9610151410.DMX
+ PROJ      Map projection/angles/margins     rad
+ MAP       Map color/dash/width              21/1/5
+ LATLON    Line color/dash/width/label/inc   0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   GF|rad.gif
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file3.grd
+ GDATTIM  = 1200
+ GLEVEL   = 300
+ GVCORD   = pres
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = sped    !   hght
+ CTYPE    = c/f     !   c
+ CONTUR   = 
+ CINT     = 25;35;45;55;65;75;85;95      !   120
+ LINE     = 19/1/1   !   1/1/5
+ FINT     = 25;35;45;55;65;75;85;95
+ FLINE    = 27-21--3;18-16--2;14-4--2
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.1/2
+ REFVEC   = 
+ TITLE    = 31/-2/~ 300 MB HEIGHTS AND WIND SPEEDS (M/S)
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/2
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: file3.grd                                                               
+ TIMES:    961015/1200                         
+
+ GRID IDENTIFIER: 
+    PLOT LEVEL VCORD PARM                       WPARM
+       1 300   PRES  SPED                       WND                        
+       2 300   PRES     HGHT                                               
+
+ GAREA:  18;-120;53;-59                                                          
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file3.grd
+ GDATTIM  = 1200
+ GLEVEL   = 200
+ GVCORD   = pres
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = sped    !   hght
+ CTYPE    = c/f     !   c
+ CONTUR   = 
+ CINT     = 25;35;45;55;65;75;85;95      !   120
+ LINE     = 19/1/1   !   1/1/5
+ FINT     = 25;35;45;55;65;75;85;95
+ FLINE    = 27-21--3;18-16--2;14-4--2
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.1/2
+ REFVEC   = 
+ TITLE    = 31/-2/~ 200 MB HEIGHTS AND WIND SPEEDS (M/S)
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/2
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT>
+ PARAMETERS FOR GDPLOT: 
+
+ Grid file: file3.grd                                                               
+ TIMES:    961015/1200                         
+
+ GRID IDENTIFIER: 
+    PLOT LEVEL VCORD PARM                       WPARM
+       1 200   PRES  SPED                       WND                        
+       2 200   PRES     HGHT                                               
+
+ GAREA:  18;-120;53;-59                                                          
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT>

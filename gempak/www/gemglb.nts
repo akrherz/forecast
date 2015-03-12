@@ -1,0 +1,108 @@
+ADDSTN  YES                                                                     
+ANLYSS  4/2;2;2;2                                                               
+AREA    ia*                                                                     
+BORDER  1                                                                       
+CINT    0                                                                       
+CLEAR   yes                                                                     
+CLRBAR                                                                          
+COLORS  1                                                                       
+CONTUR  0                                                                       
+CPYFIL                                                                          
+CTLFLG  YES                                                                     
+CTYPE   C                                                                       
+CURVE   2                                                                       
+CXSTNS                                                                          
+DATTIM  14/12                                                                   
+DELTAN  1                                                                       
+DELTAX  1                                                                       
+DELTAY  1                                                                       
+DEVICE  GPS|sfc.ps                                                              
+DTAAREA                                                                         
+EXTEND  2;2;2;2;                                                                
+FILTER  YES                                                                     
+FINT    0                                                                       
+FLINE   10-20                                                                   
+GAMMA   0.3                                                                     
+GAREA   25;-130;50;-60                                                          
+GBFILE                                                                          
+GDATTIM 14/12                                                                   
+GDEFIL  GDLIST.FIL                                                              
+GDFILE  tadv.grd                                                                
+GDNUM   LIST                                                                    
+GDOUTF                                                                          
+GFUNC   mul(3600., adv(tmpf;wnd))                                               
+GLEVEL  0                                                                       
+GNAME                                                                           
+GPACK                                                                           
+GPOINT  IAD                                                                     
+GRDAREA 25;-130;50;-60                                                          
+GRDLBL  0                                                                       
+GRDNAM                                                                          
+GUESS                                                                           
+GVCORD  none                                                                    
+GVECT   WND                                                                     
+HILO                                                                            
+HLSYM                                                                           
+IDNTYP  STID                                                                    
+INDXFL                                                                          
+KXKY    10;10                                                                   
+LATLON  0                                                                       
+LEVELS  1                                                                       
+LINE    3                                                                       
+LSTALL  YES                                                                     
+MAP     1                                                                       
+$MAPFIL MEPOWO.GSF                                                              
+MARKER  0                                                                       
+MAXGRD  200                                                                     
+MIXRLN  0                                                                       
+MRGDAT  YES                                                                     
+NPASS   2                                                                       
+NTRACE  5                                                                       
+OUTPUT  f/sf12                                                                  
+PANEL   0                                                                       
+POSN    0                                                                       
+PROJ    lcc                                                                     
+PTYPE   LOG                                                                     
+RADFIL                                                                          
+REGION  VIEW                                                                    
+REFVEC                                                                          
+$RESPONDYES                                                                     
+SATFIL                                                                          
+SAVFIL                                                                          
+SCALE   0                                                                       
+SEARCH  20                                                                      
+SFEFIL  SFLIST.FIL                                                              
+SFFILE  /data/gempak/surface/sao/961114.gem                                     
+SFOUTF                                                                          
+SFPARM  tmpf;sped;drct                                                          
+SFPRMF  $GEMTBL/SFPACK.TBL                                                      
+SHIPFL  NO                                                                      
+SHRTTL                                                                          
+SKIP    0                                                                       
+SKPMIS  NO                                                                      
+SNEFIL  SNLIST.FIL                                                              
+SNFILE  /data/gempak/upperair/961114.gem                                        
+SNOUTF                                                                          
+SNPARM  relh;tmpc                                                               
+SNPRMF  $GEMTBL/SNPACK.TBL                                                      
+SOURCE  SF                                                                      
+STATION BWI                                                                     
+STNCOL  1                                                                       
+STNDEX  SHOW                                                                    
+STNFIL  $GEMTBL/SFSTNS.TBL                                                      
+TAXIS                                                                           
+TEXT    1                                                                       
+THTALN  0                                                                       
+THTELN  0                                                                       
+TIMSTN  1/0                                                                     
+TITLE   1                                                                       
+TRACE1  TMPF;DWPF:3/2;3                                                         
+TRACE2  PMSL/4                                                                  
+TRACE3  SKNT;GUST;DARR/1                                                        
+TRACE4  VSBY/7                                                                  
+TRACE5  CLDS;;WSYM/6                                                            
+VCOORD  PRES                                                                    
+WIND    BM1                                                                     
+WINPOS  1                                                                       
+XAXIS                                                                           
+YAXIS                                                                           

@@ -1,0 +1,120 @@
+ MAP       Map color/dash/width              21/1/5
+ GAREA     Graphics area                     dmx*
+ PROJ      Map projection/angles/margins     rad
+ SATFIL    Satellite image filename(s)       
+ RADFIL    Radar image filename(s)           /data/nexrad/dmx/9610151435.DMX
+ LATLON    Line color/dash/width/label/inc   0
+ PANEL     Panel loc/color/dash/width/regn   0
+ TITLE     Title color/line/title            0
+ TEXT      Text size/font/width/hw flag      1/2/1/hw
+ CLEAR     Clear screen flag                 no
+ DEVICE    Dev|name|X;Y|colormode|plotmode   GF|rad.gif
+ Parameters requested: MAP,GAREA,PROJ,SATFIL,RADFIL,LATLON,PANEL,TITLE,TEXT,
+ CLEAR,DEVICE.
+ GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> [NT -7]  #TITLE is an unrecognized parameter.
+ GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> MAP      = 5/1/1
+ GAREA    = dmx*
+ PROJ     = rad
+ SATFIL   = 
+ RADFIL   = /data/nexrad/dmx/9610151435.DMX
+ LATLON   = 0
+ PANEL    = 0
+ TITLE    = 31/-2/ DES MOINES REFLECTIVITY DATA - 9610151435
+ TEXT     = 1/2/1/hw
+ CLEAR    = yes
+ DEVICE   = GF|rad.gif
+ GEMPAK-GPMAP> GPMAP PARAMETERS:
+
+ Device:              GF|rad.gif                                                              
+ Projection:          rad                                                                     
+ Graphics area name:  dmx*                                                                    
+ Map:                 5/1/1                                                                   
+ Title:               31/-2/ DES MOINES REFLECTIVITY DATA - 9610151435                        
+ Panel:               0                                                                       
+ Latlon:              0                                                                       
+ Clear:               YES
+Enter <cr> to accept parameters or type EXIT: Parameters requested: MAP,GAREA,PROJ,SATFIL,RADFIL,LATLON,PANEL,TITLE,TEXT,
+ CLEAR,DEVICE.
+ GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> GEMPAK-GPMAP> MAP      = 21/1/5
+ GAREA    = dmx*
+ PROJ     = rad
+ SATFIL   = 
+ RADFIL   = /data/nexrad/dmx/9610151435.DMX
+ LATLON   = 0
+ PANEL    = 0
+ TITLE    = 31/-2/ DES MOINES REFLECTIVITY DATA - 9610151435
+ TEXT     = 1/2/1/hw
+ CLEAR    = no
+ DEVICE   = GF|rad.gif
+ GEMPAK-GPMAP> GPMAP PARAMETERS:
+
+ Device:              GF|rad.gif                                                              
+ Projection:          rad                                                                     
+ Graphics area name:  dmx*                                                                    
+ Map:                 21/1/5                                                                  
+ Title:               31/-2/ DES MOINES REFLECTIVITY DATA - 9610151435                        
+ Panel:               0                                                                       
+ Latlon:              0                                                                       
+ Clear:               NO 
+Enter <cr> to accept parameters or type EXIT: Parameters requested: MAP,GAREA,PROJ,SATFIL,RADFIL,LATLON,PANEL,TITLE,TEXT,
+ CLEAR,DEVICE.
+ GEMPAK-GPMAP> AREA      Data area                         ia*
+ GAREA     Graphics area                     dmx*
+ SATFIL    Satellite image filename(s)       
+ RADFIL    Radar image filename(s)           /data/nexrad/dmx/9610151435.DMX
+ SFPARM    Surface parameter list            stid
+ DATTIM    Date/time                         15/15
+ SFFILE    Surface data file                 /data/gempak/surface/sao/961015.gem
+ COLORS    Color list                        7
+ MAP       Map color/dash/width              21/1/5
+ LATLON    Line color/dash/width/label/inc   0
+ MARKER    Marker color/type/size/width/hw   0
+ TITLE     Title color/line/title            31/-2/ DES MOINES REFLECTIVITY DATA - 9610151435
+ CLEAR     Clear screen flag                 no
+ PANEL     Panel loc/color/dash/width/regn   0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   GF|rad.gif
+ PROJ      Map projection/angles/margins     rad
+ FILTER    Filter data factor                0.7
+ TEXT      Text size/font/width/hw flag      1/2/1/hw
+ SKPMIS    Skip missing data flag            NO
+ Parameters requested: AREA,GAREA,SATFIL,RADFIL,SFPARM,DATTIM,SFFILE,COLORS,
+ MAP,LATLON,MARKER,TITLE,CLEAR,PANEL,DEVICE,PROJ,FILTER,TEXT,SKPMIS.
+ GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> GEMPAK-SFMAP> AREA     = ia*
+ GAREA    = dmx*
+ SATFIL   = 
+ RADFIL   = /data/nexrad/dmx/9610151435.DMX
+ SFPARM   = stid
+ DATTIM   = 15/15
+ SFFILE   = /data/gempak/surface/sao/961015.gem
+ COLORS   = 7
+ MAP      = 21/1/5
+ LATLON   = 0
+ MARKER   = 0
+ TITLE    = 0
+ CLEAR    = no
+ PANEL    = 0
+ DEVICE   = GF|rad.gif
+ PROJ     = rad
+ FILTER   = 0.7
+ TEXT     = 1/2/1/hw
+ SKPMIS   = NO
+ GEMPAK-SFMAP> SFMAP PARAMETERS:
+
+ Data area:          ia*                                                                     
+ Graphics area name: dmx*                                                                    
+ Valid parameters:    STID
+ Parameter colors:     7 
+ Time:              961015/1500    
+ File:              /data/gempak/surface/sao/961015.gem                         
+ Map:               21/1/5                                                                  
+ Marker:            0                                                                       
+ Title:             0                                                                       
+ Device:            GF|rad.gif                                                              
+ Projection:        rad                                                                     
+ Clear screen:      NO 
+ Filter:            YES
+ Filter factor:      0.70
+ Panel:             0                                                                       
+Enter <cr> to accept parameters or type EXIT: Parameters requested: AREA,GAREA,SATFIL,RADFIL,SFPARM,DATTIM,SFFILE,COLORS,
+ MAP,LATLON,MARKER,TITLE,CLEAR,PANEL,DEVICE,PROJ,FILTER,TEXT,SKPMIS.
+ GEMPAK-SFMAP> GEMPAK-SFMAP>

@@ -1,0 +1,15 @@
+#!/bin/csh
+cd /home/ldm/forecast/gempak
+if $# == 2 then
+	set date=$1
+	set sdate=$2
+else
+	set date=`date +%y%m%d`
+	set sdate=`date +%Y%m%d`
+endif
+
+# the original used data from two days; that would be inefficient
+
+./precip_script ${date} ${sdate}
+cp data/precip${sdate}_00 fcst/raw/precip${sdate}_00.list
+cp data/precip${sdate}_13 fcst/raw/precip${sdate}_13.list

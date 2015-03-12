@@ -1,0 +1,141 @@
+#!/bin/csh 
+########################################################
+#
+# Can be run from cron.
+# The first argument should be the target hour
+# 
+########################################################
+#
+# source the 5.2 environment variables 
+#
+set path=(~/bin $path)
+rehash
+source /usr/local/nawips/Gemenviron
+
+# Set the root Ntrans directory
+#
+# setenv NTRANSHOME ${NAWIPS}/nprogs/ntrans2.1
+#
+# cd to temporary directory. This is where the Nmeta file 
+# will be kept while the script is running.
+#
+cd data
+
+# Define current date
+#
+#set dd=`date -u +%d`
+#set date=`date -u +%y%m%d`
+
+# Set up local variables
+#
+# DATA_DIR=GEMPAK surface data directory;
+# META_DIR=Directory to store Meta files in
+# LOGFILE=file to catch GEMPAK program output
+#
+setenv DATA_DIR	/data/gempak/surface/sao
+setenv LOGFILE log_surface
+
+# Remove last hour's log file
+rm -f log_surface
+
+# Set some variables for GPMAP run
+#
+set grid=${DATA_DIR}/${1}_sao.gem
+set tmp=${grid:r}
+set time=${tmp:t}
+sleep 15
+
+#
+# Run sflist to extract assorted data
+#
+#SFPARM	= tmpf;dwpf;drct;sknt
+$GEMEXE/sflist << EOF >> $LOGFILE
+\$RESPOND = YES
+SFFILE	= $grid
+AREA	= 25;-130;50;-60
+DATTIM	= ${2}/11
+SFPARM	= tmpf
+OUTPUT	= f/tmpf_${2}_11
+run
+
+DATTIM	= ${2}/12
+SFPARM	= tmpf
+OUTPUT	= f/tmpf_${2}_12
+run
+
+DATTIM	= ${2}/13
+SFPARM	= tmpf
+OUTPUT	= f/tmpf_${2}_13
+run
+
+DATTIM	= ${2}/14
+SFPARM	= tmpf
+OUTPUT	= f/tmpf_${2}_14
+run
+
+DATTIM	= ${2}/17
+SFPARM	= tmpf
+OUTPUT	= f/tmpf_${2}_17
+run
+
+SFPARM	= drct
+OUTPUT	= f/drct_${2}_17
+run
+
+SFPARM	= sknt
+OUTPUT	= f/sknt_${2}_17
+run
+
+DATTIM	= ${2}/18
+SFPARM	= tmpf
+OUTPUT	= f/tmpf_${2}_18
+run
+
+SFPARM	= drct
+OUTPUT	= f/drct_${2}_18
+run
+
+SFPARM	= sknt
+OUTPUT	= f/sknt_${2}_18
+run
+
+DATTIM	= ${2}/19
+SFPARM	= tmpf
+OUTPUT	= f/tmpf_${2}_19
+run
+
+SFPARM	= drct
+OUTPUT	= f/drct_${2}_19
+run
+
+SFPARM	= sknt
+OUTPUT	= f/sknt_${2}_19
+run
+
+DATTIM	= ${2}/20
+SFPARM	= tmpf
+OUTPUT	= f/tmpf_${2}_20
+run
+
+SFPARM	= drct
+OUTPUT	= f/drct_${2}_20
+run
+
+SFPARM	= sknt
+OUTPUT	= f/sknt_${2}_20
+run
+
+EOF
+
+#
+# Convert the file just made into tab-separated text
+#
+foreach file ({tmpf,drct,sknt}_${2}*)
+	sed -e '1,$s/  */	/g' ${file} | cut -f2,4- > tmp.$$
+	mv tmp.$$ ${file}
+end
+
+#
+# Run GPEND to clean up
+#
+$GEMEXE/gpend

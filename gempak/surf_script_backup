@@ -1,0 +1,86 @@
+#!/bin/csh 
+########################################################
+#
+# Can be run from cron.
+# The first argument should be the target hour
+# 
+########################################################
+#
+# source the 5.2 environment variables 
+#
+set path=(~/bin $path)
+rehash
+source /usr/local/nawips/Gemenviron
+
+# Set the root Ntrans directory
+#
+# setenv NTRANSHOME ${NAWIPS}/nprogs/ntrans2.1
+#
+# cd to temporary directory. This is where the Nmeta file 
+# will be kept while the script is running.
+#
+cd data
+
+# Define current date
+#
+#set dd=`date -u +%d`
+#set date=`date -u +%y%m%d`
+
+# Set up local variables
+#
+# DATA_DIR=GEMPAK surface data directory;
+# META_DIR=Directory to store Meta files in
+# LOGFILE=file to catch GEMPAK program output
+#
+setenv DATA_DIR	/data/gempak/surface/sao
+setenv LOGFILE log_surface
+
+# Remove last hour's log file
+rm -f log_surface
+
+# Set some variables for GPMAP run
+#
+set grid=${DATA_DIR}/${1}_sao.gem
+set tmp=${grid:r}
+set time=${tmp:t}
+sleep 15
+
+#
+# Run sflist to extract assorted data
+#
+$GEMEXE/sflist << EOF >> $LOGFILE
+\$RESPOND = YES
+SFFILE	= $grid
+SFPARM	= tmpf;dwpf;drct;sknt
+AREA	= 25;-130;50;-60
+DATTIM	= ${1}/00
+OUTPUT	= f/surface_${1}_00
+run
+
+DATTIM	= ${1}/06
+OUTPUT	= f/surface_${1}_06
+run
+
+DATTIM	= ${1}/12
+OUTPUT	= f/surface_${1}_12
+run
+
+DATTIM	= ${1}/18
+OUTPUT	= f/surface_${1}_18
+run
+
+exit
+EOF
+
+#
+# Convert the file just made into tab-separated text
+#
+foreach file (surface_${1}*)
+	sed -e '1,$s/  */	/g' ${file} | cut -f2,4- > tmp.$$
+	mv tmp.$$ ${file}
+end
+
+#
+# Run GPEND to clean up
+#
+$GEMEXE/gpend

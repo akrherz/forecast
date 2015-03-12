@@ -1,0 +1,20 @@
+3 18 * * * /home/geff/gempak/doadv 2> /disk3/users/geff/logs/adv.log
+13 14 * * * csh /home/geff/gempak/doclouds 2> /disk3/users/geff/logs/cloud.log
+13 10 * * * csh /home/geff/gempak/dorh 2> /disk3/users/geff/logs/rh.log
+33 16 * * * csh /home/geff/gempak/dotemp 2> /disk3/users/geff/logs/temp.log
+15 17 * * * csh /home/geff/gempak/dosurf 2> /disk3/users/geff/logs/surf.log
+15 9 * * * csh /home/geff/gempak/doprecip 2> /disk3/users/geff/logs/precip.log
+31 11 * * * csh /disk3/data/fcst/src/do_merge 2> /home/geff/logs/merge.log
+46 23 * * * find /disk3/data/fcst/raw -mtime +7 -exec rm -f {} \;
+56 23 * * * find /fcst -mtime +14 -exec rm -f {} \; 2> /dev/null
+06 00 * * * find /home/geff/fronts -name \[0-9\]\* -mtime +7 -exec rm -f {} \;
+44 22 * * * csh /home/geff/fronts/newfronts today 01
+44 01 * * * csh /home/geff/fronts/newfronts today 04
+44 04 * * * csh /home/geff/fronts/newfronts today 07
+44 07 * * * csh /home/geff/fronts/newfronts today 10
+44 10 * * * csh /home/geff/fronts/newfronts today 13
+44 13 * * * csh /home/geff/fronts/newfronts today 16
+44 16 * * * csh /home/geff/fronts/newfronts today 19
+44 19 * * * csh /home/geff/fronts/newfronts yesterday 22
+30 21 * * * /local/users/geff/archive/getver
+30  3 * * * find /local/users/geff/archive/grid -type f -mtime +7 -exec rm -f {} \;

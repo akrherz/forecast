@@ -1,0 +1,6 @@
+SFFILE  $SAO/010806_sao.gem                                                     
+AREA    @DSM                                                                    
+DATTIM  all                                                                     
+SFPARM  SKYC;TMPF;WSYM;PMSL;;DWPF;BRBK                                          
+OUTPUT  T                                                                       
+IDNTYP  STID                                                                    

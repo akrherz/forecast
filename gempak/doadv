@@ -1,0 +1,50 @@
+#!/bin/csh
+
+cd /home/ldm/forecast/gempak
+if $# == 2 then
+	set date=$1
+	set sdate=$2
+else
+	set date=`date +%y%m%d`
+	set sdate=`date +%Y%m%d`
+endif
+
+./adv_script 10 ${date} ${sdate}
+./get_data data/af${sdate}10
+mv data/af${sdate}10.list fcst/raw
+
+./adv_script 11 ${date} ${sdate}
+./get_data data/af${sdate}11
+mv data/af${sdate}11.list fcst/raw
+
+./adv_script 12 ${date} ${sdate}
+./get_data data/af${sdate}12
+mv data/af${sdate}12.list fcst/raw
+
+./adv_script 13 ${date} ${sdate}
+./get_data data/af${sdate}13
+mv data/af${sdate}13.list fcst/raw
+
+./adv_script 14 ${date} ${sdate}
+./get_data data/af${sdate}14
+mv data/af${sdate}14.list fcst/raw
+
+./adv_script 16 ${date} ${sdate}
+./get_data data/af${sdate}16
+mv data/af${sdate}16.list fcst/raw
+
+./adv_script 17 ${date} ${sdate}
+./get_data data/af${sdate}17
+mv data/af${sdate}17.list fcst/raw
+
+./adv_script 18 ${date} ${sdate}
+./get_data data/af${sdate}18
+mv data/af${sdate}18.list fcst/raw
+
+./adv_script 19 ${date} ${sdate}
+./get_data data/af${sdate}19
+mv data/af${sdate}19.list fcst/raw
+
+./adv_script 20 ${date} ${sdate}
+./get_data data/af${sdate}20
+mv data/af${sdate}20.list fcst/raw

@@ -1,0 +1,2 @@
+#!/bin/sh
+sed -e '1,$s/  */	/g' | cut -f2,4 | grep \[0-9\]

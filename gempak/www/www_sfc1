@@ -1,0 +1,251 @@
+ GDFILE    Grid file                         file3.grd
+ DELTAN    Station spacing                   2.2
+ DELTAX    X spacing                         0.63
+ DELTAY    Y spacing                         0.63
+ GRDAREA   Area covered by grid              15;-140;60;-50
+ EXTEND    Points to extend grid             2;2;2;2
+ DTAAREA   Data area for OA                  15;-140;60;-50
+ SOURCE    Data source (SN or SF)            SN
+ SNFILE    Sounding data file                /data/gempak/profiler/961015.gem
+ SFFILE    Surface data file                 /data/gempak/surface/sao/961015.gem
+ SNPARM    Sounding parameter list           
+ SFPARM    Surface parameter list            stid
+ DATTIM    Date/time                         15/15
+ LEVELS    Vertical levels                   300;200
+ MAXGRD    Maximum number of grids           200
+ Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GDFILE   = file1.grd
+ DELTAN   = 1.1
+ DELTAX   = 0.63
+ DELTAY   = 0.63
+ GRDAREA  = 15;-140;60;-50
+ EXTEND   = 2;2;2;2
+ DTAAREA  = 15;-140;60;-50
+ SOURCE   = SF
+ SNFILE   = /data/gempak/upperair/960429.gem
+ SFFILE   = /data/gempak/surface/sao/961015.gem
+ SNPARM   = tmpc;hght;uwnd;vwnd
+ SFPARM   = tmpc;dwpc;pmsl;uwnd;vwnd
+ DATTIM   = 15/1500
+ LEVELS   = 0
+ MAXGRD   = 200
+ GEMPAK-OAGRID>
+                    OBJECTIVE ANALYSIS PARAMETERS
+
+ GRIDAREA           15.00   -140.00     59.73    -50.54  (       60.00  -50.00)
+ DELTAN              1.100
+ DELTAX              0.630
+ DELTAY              0.630
+
+ GRID POINTS     X : 143  ( 2, 2 )        Y :  72  ( 2, 2 )
+ EXTENDAREA           13.74   -141.26     60.99    -49.28
+ DATAAREA             15.00   -140.00     60.00    -50.00
+
+Enter <cr> to accept parameters or type EXIT: Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> GEMPAK-OAGRID> SFFILE    Surface data file                 /data/gempak/surface/sao/961015.gem
+ GDFILE    Grid file                         file1.grd
+ SFPARM    Surface parameter list            tmpc;dwpc;pmsl;uwnd;vwnd
+ DATTIM    Date/time                         15/1500
+ DTAAREA   Data area for OA                  15;-140;60;-50
+ GUESS     Guess file^time                   
+ GAMMA     Convergence parameter             0.3
+ SEARCH    Search radius/Extrapolation       20/EX
+ NPASS     Number of passes                  2
+ Parameters requested: SFFILE,GDFILE,SFPARM,DATTIM,DTAAREA,GUESS,GAMMA,
+ SEARCH,NPASS.
+ GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> SFFILE   = /data/gempak/surface/sao/961015.gem
+ GDFILE   = file1.grd
+ SFPARM   = tmpc;dwpc;pmsl;uwnd;vwnd
+ DATTIM   = 15/1500
+ DTAAREA  = 15;-140;60;-50
+ GUESS    = 
+ GAMMA    = 0.3
+ SEARCH   = 20/EX
+ NPASS    = 2
+ GEMPAK-OABSFC> [OABSFC 6]  WARNING:  Area is not DATA area in file.
+ [OABSFC -7]  There are too few stations in data subset area.
+ [OABSFC 9]  No data from /data/gempak/surface/sao/961015.gem will be used.
+ [OABSFC -9]  No valid parameters have been entered.
+ Parameters requested: SFFILE,GDFILE,SFPARM,DATTIM,DTAAREA,GUESS,GAMMA,
+ SEARCH,NPASS.
+ GEMPAK-OABSFC> GEMPAK-OABSFC> GDFILE    Grid file                         file1.grd
+ GDATTIM   Grid date/time                    1200
+ GLEVEL    Grid level                        200
+ GVCORD    Grid vertical coordinate          pres
+ PANEL     Panel loc/color/dash/width/regn   0
+ SKIP      Skip_cntr/skip_plt_x;skip_plt_y   /4/4
+ SCALE     Scalar scale / vector scale       
+ GFUNC     Scalar grid                       sped    !   hght
+ CTYPE     Contour type:  C/F                c
+ CONTUR    Subbox/smooth                     3/3
+ CINT      Contour interval/min/max          5
+ LINE      Line color/type/width/label       31/1/1/1
+ FINT      Fill interval/min/max             
+ FLINE     Fill colors                       
+ HILO      Color/symbol/rng/rad/cnt/intp     
+ HLSYM     HILO txt size/posn/font/wdth/hw   2;1.5//21//hw
+ CLRBAR    Color/ornt/anch/x;y/ln;wd/freq    0
+ GVECT     Vector grid                       WND
+ WIND      Wind symbol/siz/wdth/typ/hdsz     bk30-7
+ REFVEC    Mag;x;y;txtsiz/font/wdth/HW;labl  
+ TITLE     Title color/line/title            0
+ TEXT      Text size/font/width/hw flag      1/2/1/hw
+ CLEAR     Clear screen flag                 no
+ GAREA     Graphics area                     dmx*
+ SATFIL    Satellite image filename(s)       
+ RADFIL    Radar image filename(s)           /data/nexrad/dmx/9610151435.DMX
+ PROJ      Map projection/angles/margins     rad
+ MAP       Map color/dash/width              21/1/5
+ LATLON    Line color/dash/width/label/inc   0
+ DEVICE    Dev|name|X;Y|colormode|plotmode   GF|rad.gif
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file1.grd
+ GDATTIM  = 15/1500
+ GLEVEL   = 0
+ GVCORD   = none
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = tmpf
+ CTYPE    = c/f
+ CONTUR   = 
+ CINT     = 5
+ LINE     = 1/1/1
+ FINT     = 5
+ FLINE    = 28-16--1;14-11--1
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.0/3
+ REFVEC   = 
+ TITLE    = 31/-2/~ SURFACE TEMPERATURE (F) AND WINDS
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/5
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT> [GDPLOT -13]
+ [TG -4]  No times in input file.
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> [NT -5]  # Run GDPLOT and generate analyzed sfc dew point is an unrecognized command.
+ GEMPAK-GDPLOT> [NT -5]  # is an unrecognized command.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file1.grd
+ GDATTIM  = 15/1500
+ GLEVEL   = 0
+ GVCORD   = none
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = dwpf
+ CTYPE    = c/f
+ CONTUR   = 
+ CINT     = 5
+ LINE     = 1/1/1
+ FINT     = 5
+ FLINE    = 28-16--1;14-4--1
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.0/3
+ REFVEC   = 
+ TITLE    = 31/-2/~ SURFACE DEW POINT (F) AND WINDS
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/5
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT> [GDPLOT -13]
+ [TG -4]  No times in input file.
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> [NT -5]  # Run GDPLOT and generate analyzed sfc moist. divergence is an unrecognized command.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file1.grd
+ GDATTIM  = 15/1500
+ GLEVEL   = 0
+ GVCORD   = none
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = div((smul(mixr(dwpc,pmsl),wnd))
+ CTYPE    = c/f
+ CONTUR   = 
+ CINT     = -12;-8;-6;-4;-2;0;2;4;6;8
+ LINE     = 1/1/1
+ FINT     = -12;-8;-6;-4;-2;0;2;4;6;8
+ FLINE    = 15-18-1;21;22;23-27-1
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.0/3
+ REFVEC   = 
+ TITLE    = 31/-2/~ SURFACE MOISTURE DIVERGENCE
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/5
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT> [GDPLOT -13]
+ [TG -4]  No times in input file.
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> [NT -5]  # Run GDPLOT and generate sfc theta-E is an unrecognized command.
+ GEMPAK-GDPLOT> [NT -5]  # is an unrecognized command.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GEMPAK-GDPLOT> GDFILE   = file1.grd
+ GDATTIM  = 15/1500
+ GLEVEL   = 0
+ GVCORD   = none
+ PANEL    = 0
+ SKIP     = /4/4
+ SCALE    = 
+ GFUNC    = thte(pmsl,tmpc,dwpc)
+ CTYPE    = c/f
+ CONTUR   = 
+ CINT     = 4
+ LINE     = 1/1/1
+ FINT     = 4
+ FLINE    = 30-16--1;14-3--1
+ HILO     = 
+ HLSYM    = 2;1.5//21//hw
+ CLRBAR   = 0
+ GVECT    = WND
+ WIND     = bk1/1.0/3
+ REFVEC   = 
+ TITLE    = 31/-2/~ SURFACE THETA-E (K)
+ TEXT     = 1.0/2//hw
+ CLEAR    = yes
+ GAREA    = 18;-120;53;-59
+ SATFIL   = 
+ RADFIL   = 
+ PROJ     = lcc
+ MAP      = 15/1/5
+ LATLON   = 0
+ DEVICE   = invgps|||C|P
+ GEMPAK-GDPLOT> [GDPLOT -13]
+ [TG -4]  No times in input file.
+ Parameters requested: GDFILE,GDATTIM,GLEVEL,GVCORD,PANEL,SKIP,SCALE,GFUNC,
+ CTYPE,CONTUR,CINT,LINE,FINT,FLINE,HILO,HLSYM,CLRBAR,GVECT,WIND,REFVEC,TITLE,
+ TEXT,CLEAR,GAREA,SATFIL,RADFIL,PROJ,MAP,LATLON,DEVICE.
+ GEMPAK-GDPLOT> GEMPAK-GDPLOT>

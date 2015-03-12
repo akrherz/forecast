@@ -1,0 +1,6 @@
+#!/bin/csh
+cd /disk3/data/fcst
+set date=`bystrd`
+#grep DSM raw/af*list | mail geff@iastate.edu
+src/merge > /fcst/${date}.orig
+mv /fcst/${date}.orig /fcst/${date}.out

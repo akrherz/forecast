@@ -1,0 +1,25 @@
+#!/bin/csh
+cd /home/ldm/forecast/gempak
+if $# == 2 then
+	set date=$1
+	set sdate=$2
+else
+	set date=`date +%y%m%d`
+	set sdate=`date +%Y%m%d`
+endif
+
+./clean 06 ${date} ${sdate}
+./clean 07 ${date} ${sdate}
+./clean 08 ${date} ${sdate}
+./clean 09 ${date} ${sdate}
+./clean 10 ${date} ${sdate}
+./clean 11 ${date} ${sdate}
+./clean 12 ${date} ${sdate}
+./clean 13 ${date} ${sdate}
+./clean 14 ${date} ${sdate}
+./clean 15 ${date} ${sdate}
+./clean 16 ${date} ${sdate}
+./clean 17 ${date} ${sdate}
+./clean 18 ${date} ${sdate}
+./clean 19 ${date} ${sdate}
+./clean 20 ${date} ${sdate}

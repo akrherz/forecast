@@ -1,0 +1,9 @@
+ SFFILE    Surface data file                 /data/gempak/surface/sao/000507_sao.gem
+ AREA      Data area                         25;-130;50;-60
+ DATTIM    Date/time                         all
+ SFPARM    Surface parameter list            tclo
+ OUTPUT    Output device/filename            f/cloud
+ IDNTYP    STNM or STID                      STID
+ Parameters requested: SFFILE,AREA,DATTIM,SFPARM,OUTPUT,IDNTYP.
+ GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> GEMPAK-SFLIST> Parameters requested: SFFILE,AREA,DATTIM,SFPARM,OUTPUT,IDNTYP.
+ GEMPAK-SFLIST> GEMPAK-SFLIST>

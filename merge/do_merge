@@ -1,0 +1,27 @@
+#!/bin/csh
+cd ~/forecast/merge
+
+if $#argv == 3 then
+	set today=$1
+	set yesterday=$2
+	set out=out/$3
+# The '20' below is the first two digits of the year.  This will be
+# wrong in 2100.
+	set target=/fcst/20$3
+#	set target=/fcst/$3
+else
+	set today=`date --date='1 day ago' +%y%m%d`
+	set yesterday=`date --date='2 day ago' +%y%m%d`
+	set out=out/`date --date='3 days ago' +%y%m%d`
+	set target=/fcst/`date --date='3 days ago' +%Y%m%d`
+endif
+
+set output=${out}.out
+set final=${target}.out
+./merge.pl ${today} ${yesterday} > $output
+if -z ${output} then
+	echo Fix ${output} | mail -s \
+		"forecast verification failure" akrherz@iastate.edu
+else
+	cp ${output} ${final}
+endif

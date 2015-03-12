@@ -1,0 +1,2 @@
+nawk -v grid=sf12.grid -f split.awk < city.list > sf12.data
+cut -f1 city.list | paste - sf12.data > sf12.list

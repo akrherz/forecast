@@ -1,0 +1,16 @@
+#!/bin/csh
+#set echo
+cd /home/ldm/forecast/gempak
+if $# == 2 then
+	set date=$1
+	set sdate=$2
+else
+	set date=`date +%y%m%d`
+	set sdate=`date +%Y%m%d`
+endif
+
+./surf_script ${date} ${sdate}
+#foreach file (data/{tmpf,dwpf,drct,sknt}_${sdate}*)
+foreach file (data/{tmpf,drct,sknt}_${sdate}*)
+	cp ${file} fcst/raw/${file:t}.list
+end

@@ -1,0 +1,4 @@
+#!/bin/csh
+./extract < $1 > ${1:r}.grid
+gawk -v grid=${1:r}.grid -f split.awk < city.list > ${1:r}.data
+cut -f1 city.list | paste - ${1:r}.data > ${1:r}.list

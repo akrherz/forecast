@@ -1,0 +1,66 @@
+ GDFILE    Grid file                         tadv.grd
+ DELTAN    Station spacing                   1
+ DELTAX    X spacing                         1
+ DELTAY    Y spacing                         1
+ GRDAREA   Area covered by grid              25;-130;50;-60
+ EXTEND    Points to extend grid             2;2;2;2;
+ DTAAREA   Data area for OA                  15;-140;60;-50
+ SOURCE    Data source (SN or SF)            SF
+ SNFILE    Sounding data file                /data/gempak/upperair/960429.gem
+ SFFILE    Surface data file                 /data/gempak/surface/sao/961030.gem
+ SNPARM    Sounding parameter list           tmpc;hght;uwnd;vwnd
+ SFPARM    Surface parameter list            tmpf;sped;dret
+ DATTIM    Date/time                         30/11
+ LEVELS    Vertical levels                   1
+ MAXGRD    Maximum number of grids           200
+ Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID> GEMPAK-OAGRID>
+                    OBJECTIVE ANALYSIS PARAMETERS
+
+ GRIDAREA           25.00   -130.00     50.00    -60.00  (       50.00  -60.00)
+ DELTAN              1.000
+ DELTAX              1.000
+ DELTAY              1.000
+
+ GRID POINTS     X :  71  ( 2, 2 )        Y :  26  ( 2, 2 )
+ EXTENDAREA           23.00   -132.00     52.00    -58.00
+ DATAAREA             15.00   -140.00     60.00    -50.00
+
+Enter <cr> to accept parameters or type EXIT: Parameters requested: GDFILE,DELTAN,DELTAX,DELTAY,GRDAREA,EXTEND,DTAAREA,
+ SOURCE,SNFILE,SFFILE,SNPARM,SFPARM,DATTIM,LEVELS,MAXGRD.
+ GEMPAK-OAGRID> SFFILE    Surface data file                 /data/gempak/surface/sao/961030.gem
+ GDFILE    Grid file                         tadv.grd
+ SFPARM    Surface parameter list            tmpf;sped;dret
+ DATTIM    Date/time                         30/12
+ DTAAREA   Data area for OA                  15;-140;60;-50
+ GUESS     Guess file^time                   
+ GAMMA     Convergence parameter             0.3
+ SEARCH    Search radius/Extrapolation       20
+ NPASS     Number of passes                  2
+ Parameters requested: SFFILE,GDFILE,SFPARM,DATTIM,DTAAREA,GUESS,GAMMA,
+ SEARCH,NPASS.
+ GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> [NT -7]  GAMMX is an unrecognized parameter.
+ GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> [FL 2]  File tadv.grd does not exist.
+ [DM -2]  File tadv.grd cannot be opened.
+ [GD -2]  File tadv.grd cannot be opened.
+ [OA -1]  Grid file tadv.grd could not be opened.
+ Parameters requested: SFFILE,GDFILE,SFPARM,DATTIM,DTAAREA,GUESS,GAMMA,
+ SEARCH,NPASS.
+ GEMPAK-OABSFC> GDATTIM   Grid date/time                    30/11
+ GLEVEL    Grid level                        0
+ GVCORD    Grid vertical coordinate          none
+ GFUNC     Scalar grid                       mul(3600., adv(tmpf;wnd))
+ GDFILE    Grid file                         tadv.grd
+ GAREA     Graphics area                     dmx*
+ PROJ      Map projection/angles/margins     lcc
+ SCALE     Scalar scale / vector scale       0
+ OUTPUT    Output device/filename            f/f11
+ Parameters requested: GDATTIM,GLEVEL,GVCORD,GFUNC,GDFILE,GAREA,PROJ,SCALE,
+ OUTPUT.
+ GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> [FL 2]  File tadv.grd does not exist.
+ [DM -2]  File tadv.grd cannot be opened.
+ [GD -2]  File tadv.grd cannot be opened.
+ Parameters requested: GDATTIM,GLEVEL,GVCORD,GFUNC,GDFILE,GAREA,PROJ,SCALE,
+ OUTPUT.
+ GEMPAK-GDLIST>

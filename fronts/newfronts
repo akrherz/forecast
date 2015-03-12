@@ -1,0 +1,32 @@
+#!/bin/csh
+# The first argument is the day, and the second is the hour.
+
+cd ~/forecast/fronts
+set path=(~/bin $path)
+rehash; sync
+setenv DATA /data/text/frt/
+
+if (${1} == today) then
+	set day=`date -u +%Y%m%d`
+else
+	set day=`date --date=${1} -u +%Y%m%d`
+endif
+
+foreach type (COLD OCFNT STNRY WARM)
+	# grab the file for the named hour, the hour before, and the hour after.
+	# only one will exist...
+	set target=${day}${2}.frt
+	 cp ${DATA}/${target} tmp 
+	 #cat ${DATA}/${day}`echo ${2} - 1 | bc`.frt >> tmp/${target}
+	 #cat ${DATA}/${day}`echo ${2} + 1 | bc`.frt >> tmp/${target}
+	./front_convert tmp/${day}${2}.frt $type
+
+	echo ${day}${2}.${type} > front.data
+	gawk -f fronts.awk < city.list
+	touch close.txt far.txt
+	(sort close.txt far.txt | uniq > fcst/raw/${day}${2}.${type}) \
+		>& /dev/null
+	rm close.txt far.txt >& /dev/null
+	mv err.txt fcst/raw/${day}${2}_${type}.err >& /dev/null
+end
+rm tmp/*.frt *.COLD *.OCFNT *.STNRY *.WARM
