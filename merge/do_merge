@@ -1,5 +1,5 @@
 #!/bin/csh
-cd ~/forecast/merge
+cd ~/projects/forecast/merge
 
 if $#argv == 3 then
 	set today=$1

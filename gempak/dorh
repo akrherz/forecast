@@ -1,5 +1,5 @@
 #!/bin/csh
-cd /home/ldm/forecast/gempak
+cd ~/projects/forecast/gempak
 if $# == 2 then
 	set date=$1
 	set sdate=$2
