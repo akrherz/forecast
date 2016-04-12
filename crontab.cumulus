@@ -1,3 +1,10 @@
+
+22 22 * * * cd forecast; csh process
+22 23 * * * cd forecast; csh scour > /dev/null 2> scour.err
+0 13 * * * cd forecast/merge; csh do_merge > /dev/null 2> merge.err
+
+
+# Unsure what the below is or does anymore
 3 18 * * * /home/geff/gempak/doadv 2> /disk3/users/geff/logs/adv.log
 13 14 * * * csh /home/geff/gempak/doclouds 2> /disk3/users/geff/logs/cloud.log
 13 10 * * * csh /home/geff/gempak/dorh 2> /disk3/users/geff/logs/rh.log
