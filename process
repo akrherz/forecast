@@ -4,8 +4,8 @@ if $# == 2 then
 	set date=$1
 	set sdate=$2
 else
-	set date=`date +%Y%m%d`
-	set sdate=`date +%y%m%d`
+	set date=`date --date '1 day ago' +%Y%m%d`
+	set sdate=`date --date '1 day ago' +%y%m%d`
 endif
 
 gempak/doadv ${date} ${sdate}
