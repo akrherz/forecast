@@ -1,10 +1,10 @@
 #!/bin/csh
 set date=`date --date='15 days ago' +%y%m%d`
-cd ~/forecast/gempak/data
+cd ~/projects/forecast/gempak/data
 rm *[a-z_\.]${date}*
-cd ~/forecast/fcst/raw
+cd ~/projects/forecast/fcst/raw
 rm *[a-z_\.]${date}*
-cd ~/forecast/merge/out
+cd ~/projects/forecast/merge/out
 rm ${date}.out
 cd /fcst
 rm ${date}.out

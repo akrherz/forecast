@@ -1,7 +1,7 @@
 #!/bin/csh
 # The first argument is the day, and the second is the hour.
 
-cd ~/forecast/fronts
+cd ~/projects/forecast/fronts
 set path=(~/bin $path)
 rehash; sync
 setenv DATA /data/text/frt/
