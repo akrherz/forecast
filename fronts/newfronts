@@ -29,4 +29,4 @@ foreach type (COLD OCFNT STNRY WARM)
 	rm close.txt far.txt >& /dev/null
 	mv err.txt fcst/raw/${day}${2}_${type}.err >& /dev/null
 end
-rm tmp/*.frt *.COLD *.OCFNT *.STNRY *.WARM
+rm front.data tmp/*.frt *.COLD *.OCFNT *.STNRY *.WARM
