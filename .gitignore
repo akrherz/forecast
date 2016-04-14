@@ -1,2 +1,3 @@
 gempak/data/*
 fcst/raw/*
+merge/out/*.out
