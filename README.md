@@ -1,2 +1,4 @@
-# forecast
+forecast
+--------
+
 Ancient Forecast Verification System [abandoned]
