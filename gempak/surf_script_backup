@@ -32,7 +32,7 @@ cd data
 # META_DIR=Directory to store Meta files in
 # LOGFILE=file to catch GEMPAK program output
 #
-setenv DATA_DIR	/data/gempak/surface/sao
+setenv DATA_DIR	/data/gempak/surface
 setenv LOGFILE log_surface
 
 # Remove last hour's log file
