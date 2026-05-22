@@ -12,7 +12,7 @@
  * terminated with a newline character.
  *
  */
-main(int argc, char **argv) {
+int main(int argc, char **argv) {
 char	line[LineLen],
 	target[LineLen];
 float	f;
@@ -69,4 +69,6 @@ int	i,
 		}
 		(void) putchar('\n');
 	}
+
+	return 0;
 }
