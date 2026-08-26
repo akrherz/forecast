@@ -41,7 +41,7 @@ while ($line = <STDIN>) {
 			# Yes.  Keep it.
 			# Have we seen this station before?
 			if (exists $data{$stn}) {
-				# Yes.  Add this data to previous entries. 
+				# Yes.  Add this data to previous entries.
 				$data{$stn} += $total;
 			} else {
 				# No.  Insert this entry.

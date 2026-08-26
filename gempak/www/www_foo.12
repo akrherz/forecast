@@ -34,7 +34,7 @@ Enter <cr> to accept parameters or type EXIT: Parameters requested: GDFILE,DELTA
  SFPARM    Surface parameter list            tmpf;sped;dret
  DATTIM    Date/time                         30/12
  DTAAREA   Data area for OA                  15;-140;60;-50
- GUESS     Guess file^time                   
+ GUESS     Guess file^time
  GAMMA     Convergence parameter             0.3
  SEARCH    Search radius/Extrapolation       20
  NPASS     Number of passes                  2

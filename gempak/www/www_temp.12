@@ -4,7 +4,7 @@
  DELTAY    Y spacing                         1
  GRDAREA   Area covered by grid              25;-130;50;-60
  EXTEND    Points to extend grid             2;2;2;2;
- DTAAREA   Data area for OA                  
+ DTAAREA   Data area for OA
  SOURCE    Data source (SN or SF)            SF
  SNFILE    Sounding data file                /data/gempak/upperair/961108.gem
  SFFILE    Surface data file                 /data/gempak/surface/sao/961108.gem
@@ -39,32 +39,32 @@ Enter <cr> to accept parameters or type EXIT: [FL 126]  The file temp.grd alread
  LEVELS    Vertical levels                   850;500
  VCOORD    Vertical coordinate type          PRES
  DATTIM    Date/time                         08/12
- DTAAREA   Data area for OA                  
- GUESS     Guess file^time                   
+ DTAAREA   Data area for OA
+ GUESS     Guess file^time
  GAMMA     Convergence parameter             0.3
  SEARCH    Search radius/Extrapolation       20
  NPASS     Number of passes                  2
  Parameters requested: SNFILE,GDFILE,SNPARM,STNDEX,LEVELS,VCOORD,DATTIM,
  DTAAREA,GUESS,GAMMA,SEARCH,NPASS.
  GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND> GEMPAK-OABSND>
- OABSND PARAMETERS: 
+ OABSND PARAMETERS:
 
  Output grid file:        temp.grd
  Number of x, y points:    71    26
  Grid bnds:     25.00  -130.00    50.00   -60.00 Grid xtnd:    2   2   2   2
  Station spacing:           1.00
- No first guess file is requested. 
+ No first guess file is requested.
  Sounding file:           /data/gempak/upperair/961108.gem
  Data area:               23.00;-132.00;52.00;-58.00
  Level parameters:        RELH  TMPC
  Levels:                   850     500
- Vertical coordinate:     PRES                                                                    
+ Vertical coordinate:     PRES
  Station parameters:      SHOW
- Time:                   961108/1200         
+ Time:                   961108/1200
  GAMMA: 0.30   SEARCH:  20.00  NPASS:  2
- No data extrapolation will occur. 
+ No data extrapolation will occur.
 Enter <cr> to accept parameters or type EXIT:
- Processing data at time 961108/1200         
+ Processing data at time 961108/1200
 
    RMS values for pass  1
  PARAMETER:     RELH    TMPC    RELH    TMPC    SHOW

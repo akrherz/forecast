@@ -4,7 +4,7 @@
  DELTAY    Y spacing                         1
  GRDAREA   Area covered by grid              25;-130;50;-60
  EXTEND    Points to extend grid             2;2;2;2;
- DTAAREA   Data area for OA                  
+ DTAAREA   Data area for OA
  SOURCE    Data source (SN or SF)            SN
  SNFILE    Sounding data file                /data/gempak/upperair/961114.gem
  SFFILE    Surface data file                 /data/gempak/upperair/961108.gem
@@ -36,27 +36,27 @@ Enter <cr> to accept parameters or type EXIT: [FL 126]  The file tadv.grd alread
  GDFILE    Grid file                         tadv.grd
  SFPARM    Surface parameter list            tmpf;sped;drct
  DATTIM    Date/time                         14/12
- DTAAREA   Data area for OA                  
- GUESS     Guess file^time                   
+ DTAAREA   Data area for OA
+ GUESS     Guess file^time
  GAMMA     Convergence parameter             0.3
  SEARCH    Search radius/Extrapolation       20
  NPASS     Number of passes                  2
  Parameters requested: SFFILE,GDFILE,SFPARM,DATTIM,DTAAREA,GUESS,GAMMA,
  SEARCH,NPASS.
  GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC> GEMPAK-OABSFC>
- OABSFC PARAMETERS: 
+ OABSFC PARAMETERS:
 
  Output grid file:        tadv.grd
  Number of x, y points:    71    26
  Grid bnds:     25.00  -130.00    50.00   -60.00  Grid xtnd:    2   2   2   2
  Station spacing:           1.00
- No first guess file is requested. 
+ No first guess file is requested.
  Surface file:            /data/gempak/surface/sao/961114.gem
  Data area:               23.00;-132.00;52.00;-58.00
  Parameters:              TMPF  SPED  DRCT
- Time:                   961114/1200         
+ Time:                   961114/1200
  GAMMA: 0.30   SEARCH:  20.00  NPASS:  2
- No data extrapolation will occur. 
+ No data extrapolation will occur.
 Enter <cr> to accept parameters or type EXIT:
    RMS values for pass  1
             TMPF    SPED    DRCT
@@ -82,16 +82,16 @@ Enter <cr> to accept parameters or type EXIT:
  OUTPUT.
  GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST> GEMPAK-GDLIST>
 
- GDLIST PARAMETERS: 
+ GDLIST PARAMETERS:
 
- Grid file: tadv.grd                                                                
+ Grid file: tadv.grd
  GRID IDENTIFIER:
     TIME1             TIME2         LEVL1 LEVL2   VCORD PARM
-961114/1200                             0          NONE MUL3600ADVT 
+961114/1200                             0          NONE MUL3600ADVT
 
- GAREA:    25;-130;50;-60                                  
+ GAREA:    25;-130;50;-60
  SCALE FACTOR : 10** 0
- OUTPUT:    FILE/              
+ OUTPUT:    FILE/
 
  MINIMUM AND MAXIMUM VALUES    -1.96     2.43
 Enter <cr> to accept parameters or type EXIT: Parameters requested: GDATTIM,GLEVEL,GVCORD,GFUNC,GDFILE,GAREA,PROJ,SCALE,

@@ -1,5 +1,5 @@
 
-22 22 * * * cd forecast; csh process
+22 22 * * * cd forecast; bash process.sh
 22 23 * * * cd forecast; csh scour > /dev/null 2> scour.err
 0 13 * * * cd forecast/merge; csh do_merge > /dev/null 2> merge.err
 

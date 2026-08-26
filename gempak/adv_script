@@ -1,13 +1,13 @@
-#!/bin/csh 
+#!/bin/csh
 
 ########################################################
 #
 # Can be run from cron.
 # The first argument should be the target hour
-# 
+#
 ########################################################
 #
-# source the 5.2 environment variables 
+# source the 5.2 environment variables
 #
 source /usr/local/nawips/Gemenviron
 
@@ -15,7 +15,7 @@ source /usr/local/nawips/Gemenviron
 #
 # setenv NTRANSHOME ${NAWIPS}/nprogs/ntrans2.1
 #
-# cd to temporary directory. This is where the Nmeta file 
+# cd to temporary directory. This is where the Nmeta file
 # will be kept while the script is running.
 #
 cd data
@@ -50,7 +50,7 @@ rm -f tadv.grd
 oagrid << EOF > $LOGFILE
 \$RESPOND = YES
 SFFILE	= $grid
-SNFILE	= 
+SNFILE	=
 GDFILE	= tadv.grd
 DELTAN	= 3.5
 DELTAX	= 1

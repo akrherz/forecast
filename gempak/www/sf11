@@ -1,9 +1,9 @@
 
 
- Grid file: tadv.grd                                                            
- GRID IDENTIFIER: 
+ Grid file: tadv.grd
+ GRID IDENTIFIER:
     TIME1             TIME2         LEVL1 LEVL2   VCORD PARM
-961108/1100                             0          NONE MUL3600ADVT 
+961108/1100                             0          NONE MUL3600ADVT
  AREA: WV                                                  GRID SIZE:    71   26
  COLUMNS:    40   59     ROWS:     8   21
 

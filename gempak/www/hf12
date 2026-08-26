@@ -1,9 +1,9 @@
 
 
- Grid file: rh.grd                                                              
- GRID IDENTIFIER: 
+ Grid file: rh.grd
+ GRID IDENTIFIER:
     TIME1             TIME2         LEVL1 LEVL2   VCORD PARM
-961114/1200                           850          PRES RELH        
+961114/1200                           850          PRES RELH
  AREA: 25;-130;50;-60                                      GRID SIZE:    71   26
  COLUMNS:     1   71     ROWS:     1   26
 
