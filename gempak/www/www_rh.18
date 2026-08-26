@@ -4,7 +4,7 @@
  DELTAY    Y spacing                         1
  GRDAREA   Area covered by grid              25;-130;50;-60
  EXTEND    Points to extend grid             2;2;2;2;
- DTAAREA   Data area for OA                  
+ DTAAREA   Data area for OA
  SOURCE    Data source (SN or SF)            SN
  SNFILE    Sounding data file                /data/gempak/upperair/961108.gem
  SFFILE    Surface data file                 /data/gempak/surface/sao/961108.gem
@@ -36,8 +36,8 @@ Enter <cr> to accept parameters or type EXIT: Parameters requested: GDFILE,DELTA
  LEVELS    Vertical levels                   850;500
  VCOORD    Vertical coordinate type          PRES
  DATTIM    Date/time                         08/18
- DTAAREA   Data area for OA                  
- GUESS     Guess file^time                   
+ DTAAREA   Data area for OA
+ GUESS     Guess file^time
  GAMMA     Convergence parameter             0.3
  SEARCH    Search radius/Extrapolation       20
  NPASS     Number of passes                  2

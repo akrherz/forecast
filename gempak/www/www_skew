@@ -1,7 +1,7 @@
  SNFILE    Sounding data file                /data/gempak/profiler/961015.gem
  DATTIM    Date/time                         15/13
  AREA      Data area                         ia*
- SNPARM    Sounding parameter list           
+ SNPARM    Sounding parameter list
  LINE      Line color/type/width/label       31/1/1/1
  PTYPE     Plot type/h:w ratio/margins       lin
  VCOORD    Vertical coordinate type          hght
@@ -49,7 +49,7 @@
  THTALN   = 4/1/1
  THTELN   = 4/2/1
  MIXRLN   = 2/2/1
- GEMPAK-SNPROF> Next plot - Time: 961015/1200          Station:  72558   OAX     
+ GEMPAK-SNPROF> Next plot - Time: 961015/1200          Station:  72558   OAX
 Enter <cr> to accept parameters or type EXIT: Parameters requested: SNFILE,DATTIM,AREA,SNPARM,LINE,PTYPE,VCOORD,STNDEX,
  STNCOL,WIND,WINPOS,MARKER,BORDER,TITLE,DEVICE,YAXIS,XAXIS,FILTER,CLEAR,
  PANEL,TEXT,THTALN,THTELN,MIXRLN.
@@ -77,7 +77,7 @@ Enter <cr> to accept parameters or type EXIT: Parameters requested: SNFILE,DATTI
  THTALN   = 4/1/1
  THTELN   = 4/2/1
  MIXRLN   = 2/2/1
- GEMPAK-SNPROF> Next plot - Time: 961015/1200          Station:  74455   DVN     
+ GEMPAK-SNPROF> Next plot - Time: 961015/1200          Station:  74455   DVN
 Enter <cr> to accept parameters or type EXIT: Parameters requested: SNFILE,DATTIM,AREA,SNPARM,LINE,PTYPE,VCOORD,STNDEX,
  STNCOL,WIND,WINPOS,MARKER,BORDER,TITLE,DEVICE,YAXIS,XAXIS,FILTER,CLEAR,
  PANEL,TEXT,THTALN,THTELN,MIXRLN.

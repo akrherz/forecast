@@ -11,7 +11,7 @@
  * citycvt:
  *
  *	This program converts a city database from a Unidata form into the
- * form that this package can deal with. 
+ * form that this package can deal with.
  *	Front data doesn't allow negative longitude, and the data we're
  * in has negative longitude (as defined by city_sfc), so that sign is
  * switched in this program.

@@ -1,10 +1,10 @@
  GDFILE    Grid file                         $GEMDATA/HRCBOB.GRD
- DELTAN    Station spacing                   
- DELTAX    X spacing                         
- DELTAY    Y spacing                         
- GRDAREA   Area covered by grid              
+ DELTAN    Station spacing
+ DELTAX    X spacing
+ DELTAY    Y spacing
+ GRDAREA   Area covered by grid
  EXTEND    Points to extend grid             2;2;2;2
- DTAAREA   Data area for OA                  
+ DTAAREA   Data area for OA
  SOURCE    Data source (SN or SF)            SF
  SNFILE    Sounding data file                $GEMDATA/HRCBOB.SND
  SFFILE    Surface data file                 $GEMDATA/HRCBOB.SFC
@@ -33,8 +33,8 @@ Enter <cr> to accept parameters or type EXIT: Parameters requested: GDFILE,DELTA
  GDFILE    Grid file                         tadv.grd
  SFPARM    Surface parameter list            tmpf;sped;drct
  DATTIM    Date/time                         30/11
- DTAAREA   Data area for OA                  
- GUESS     Guess file^time                   
+ DTAAREA   Data area for OA
+ GUESS     Guess file^time
  GAMMA     Convergence parameter             0.3
  SEARCH    Search radius/Extrapolation       20
  NPASS     Number of passes                  2

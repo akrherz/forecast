@@ -135,22 +135,22 @@ foreach $place (@stn) {
 
 	# 12Z fronts
 	$sum = "";
-	if ( ($warm{'07'}{$place} eq "close") or 
+	if ( ($warm{'07'}{$place} eq "close") or
 		($warm{'10'}{$place} eq "close") or
 		($warm{'13'}{$place} eq "close") ) {
 		$sum = $sum . "1,";
 	}
-	if ( ($cold{'07'}{$place} eq "close") or 
+	if ( ($cold{'07'}{$place} eq "close") or
 		($cold{'10'}{$place} eq "close") or
 		($cold{'13'}{$place} eq "close") ) {
 		$sum = $sum . "2,";
 	}
-	if ( ($ocfnt{'07'}{$place} eq "close") or 
+	if ( ($ocfnt{'07'}{$place} eq "close") or
 		($ocfnt{'10'}{$place} eq "close") or
 		($ocfnt{'13'}{$place} eq "close") ) {
 		$sum = $sum . "3,";
 	}
-	if ( ($stnry{'07'}{$place} eq "close") or 
+	if ( ($stnry{'07'}{$place} eq "close") or
 		($stnry{'10'}{$place} eq "close") or
 		($stnry{'13'}{$place} eq "close") ) {
 		$sum = $sum . "4,";
@@ -165,22 +165,22 @@ foreach $place (@stn) {
 
 	# 18Z fronts
 	$sum = "";
-	if ( ($warm{'13'}{$place} eq "close") or 
+	if ( ($warm{'13'}{$place} eq "close") or
 		($warm{'16'}{$place} eq "close") or
 		($warm{'19'}{$place} eq "close") ) {
 		$sum = $sum . "1,";
 	}
-	if ( ($cold{'13'}{$place} eq "close") or 
+	if ( ($cold{'13'}{$place} eq "close") or
 		($cold{'16'}{$place} eq "close") or
 		($cold{'19'}{$place} eq "close") ) {
 		$sum = $sum . "2,";
 	}
-	if ( ($ocfnt{'13'}{$place} eq "close") or 
+	if ( ($ocfnt{'13'}{$place} eq "close") or
 		($ocfnt{'16'}{$place} eq "close") or
 		($ocfnt{'19'}{$place} eq "close") ) {
 		$sum = $sum . "3,";
 	}
-	if ( ($stnry{'13'}{$place} eq "close") or 
+	if ( ($stnry{'13'}{$place} eq "close") or
 		($stnry{'16'}{$place} eq "close") or
 		($stnry{'19'}{$place} eq "close") ) {
 		$sum = $sum . "4,";
