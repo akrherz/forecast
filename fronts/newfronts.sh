@@ -1,9 +1,11 @@
 #!/bin/bash
 # The first argument is the day, and the second is the hour.
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <YYYYmmdd> <hour>"
+    exit 1
+fi
 
 cd ~/projects/forecast/fronts || exit
-PATH=~/bin:$PATH
-export PATH
 DATA=/data/text/frt/
 export DATA
 
@@ -12,16 +14,17 @@ if [ "${1}" == "today" ]; then
 else
     day=$(date --date="${1}" -u +%Y%m%d)
 fi
+src="${day}${2}.frt"
 target="${day}${2}.frt"
-if [ ! -f "${DATA}/${target}" ]; then
-    echo "Front file ${target} missing, trying hour+1"
-    target="${day}$(printf "%02d" $((10#${2}+1))).frt"
+if [ ! -f "${DATA}/${src}" ]; then
+    echo "Front file ${src} missing, trying hour+1"
+    src="${day}$(printf "%02d" $((10#${2}+1))).frt"
 fi
-if [ ! -f "${DATA}/${target}" ]; then
-    echo "Front file ${target} missing, exiting"
+if [ ! -f "${DATA}/${src}" ]; then
+    echo "Front file ${src} missing, exiting"
     exit 1
 fi
-cp "${DATA}/${target}" tmp/
+cp "${DATA}/${src}" "tmp/${target}"
 
 for type in COLD OCFNT STNRY WARM; do
     # grab the file for the named hour, the hour before, and the hour after.
