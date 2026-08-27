@@ -14,11 +14,6 @@ gempak/dorh "${date}" "${sdate}"
 gempak/dotemp "${date}" "${sdate}"
 gempak/dosurf "${date}" "${sdate}"
 gempak/doprecip "${date}" "${sdate}"
-fronts/newfronts "${date}" 01
-fronts/newfronts "${date}" 04
-fronts/newfronts "${date}" 07
-fronts/newfronts "${date}" 10
-fronts/newfronts "${date}" 13
-fronts/newfronts "${date}" 16
-fronts/newfronts "${date}" 19
-fronts/newfronts "${date}" 22
+for hr in 01 04 07 10 13 16 19 22; do
+    bash fronts/newfronts.sh "${date}" "${hr}"
+done
