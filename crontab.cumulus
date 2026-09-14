@@ -1,7 +1,7 @@
 
 22 22 * * * cd forecast; bash process.sh
 22 23 * * * cd forecast; csh scour > /dev/null 2> scour.err
-0 13 * * * cd forecast/merge; csh do_merge > /dev/null 2> merge.err
+0 13 * * * cd forecast/merge; bash do_merge.sh > /dev/null 2> merge.err
 
 
 # Unsure what the below is or does anymore
@@ -15,13 +15,5 @@
 46 23 * * * find /disk3/data/fcst/raw -mtime +7 -exec rm -f {} \;
 56 23 * * * find /fcst -mtime +14 -exec rm -f {} \; 2> /dev/null
 06 00 * * * find /home/geff/fronts -name \[0-9\]\* -mtime +7 -exec rm -f {} \;
-44 22 * * * csh /home/geff/fronts/newfronts today 01
-44 01 * * * csh /home/geff/fronts/newfronts today 04
-44 04 * * * csh /home/geff/fronts/newfronts today 07
-44 07 * * * csh /home/geff/fronts/newfronts today 10
-44 10 * * * csh /home/geff/fronts/newfronts today 13
-44 13 * * * csh /home/geff/fronts/newfronts today 16
-44 16 * * * csh /home/geff/fronts/newfronts today 19
-44 19 * * * csh /home/geff/fronts/newfronts yesterday 22
 30 21 * * * /local/users/geff/archive/getver
 30  3 * * * find /local/users/geff/archive/grid -type f -mtime +7 -exec rm -f {} \;

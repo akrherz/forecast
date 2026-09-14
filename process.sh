@@ -15,5 +15,5 @@ gempak/dotemp "${date}" "${sdate}"
 gempak/dosurf "${date}" "${sdate}"
 gempak/doprecip "${date}" "${sdate}"
 for hr in 01 04 07 10 13 16 19 22; do
-    bash fronts/newfronts.sh "${date}" "${hr}"
+    bash fronts/fronts.sh "${date}" "${hr}"
 done
